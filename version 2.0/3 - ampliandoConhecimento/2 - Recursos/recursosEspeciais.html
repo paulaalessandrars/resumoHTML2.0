@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ampliando o Conhecimento</title>
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+</head>
+<body>
+    <div id="header">
+        <h1>Recursos Especiais</h1>
+    </div>
+
+    <div id="menu">
+        <a href="#datalist" target="_self">Datalist</a>
+        <a href="#ckp" target="_self">Code, kbd e pre</a>
+        <a href="#ds" target="_self">Details e summary</a>
+        <a href="#mp" target="_self">Meter e progress</a>
+        <a href="#mj" target="_self">Mark e Javascript</a>
+        <a href="#canvas" target="_self">Canvas</a>
+        <a href="#atributos" target="_self">Novos atributos do HTML 5</a>
+        <a href="../ampliandoConhecimento.html"><< Voltar</a>
+    </div>
+
+
+    <div id="content"> <!-- Define uma seção de conteúdo com id "content" -->
+
+        <h3 id="datalist"><strong>1. Datalist</strong></h3>
+            O datalist é um elemento HTML que fornece uma lista de opções pré-definidas para um campo input, facilitando a seleção de valores. Quando o usuário começa a digitar no campo, as opções da lista aparecem para seleção automática.
+
+                <p><b>Neste exemplo, ao digitar no campo de entrada, o usuário verá sugestões de frutas para escolher:</b></p>
+                        <form id="exemplo"> <!-- Inicia um formulário HTML -->
+                            <label for="fruits">Escolha uma fruta:</label> <!-- Cria um rótulo para o campo de entrada, associando-o ao elemento de entrada com o id "fruits" -->
+                            <input list="fruit-options" id="fruits" name="fruits"> <!-- Cria um campo de entrada que utiliza uma lista de opções (datalist) para sugerir valores ao usuário -->
+                            
+                            <!-- Define uma lista de opções para o campo de entrada acima -->
+                            <datalist id="fruit-options"> <!-- Inicia uma lista de opções associada ao campo de entrada com id "fruit-options" -->
+                                <option value="Maçã"> <!-- Define uma opção de valor "Maçã" -->
+                                <option value="Banana"> <!-- Define uma opção de valor "Banana" -->
+                                <option value="Laranja"> <!-- Define uma opção de valor "Laranja" -->
+                                <option value="Morango"> <!-- Define uma opção de valor "Morango" -->
+                            </datalist> <!-- Fecha a lista de opções -->
+                        </form> <!-- Fecha o formulário HTML -->
+
+                  
+        <h3 id="ckp"><strong>2. Code, kbd e pre</strong></h3>
+
+            <p><b>2.1. Code</b></p>
+                O code é utilizado para definir trechos de código. Ele é geralmente usado para destacar exemplos de código ou comandos dentro de um documento HTML.
+                    <ul>
+                        <li><b>Uso principal: </b>Destacar código-fonte ou comandos.</li>
+                        <li><b>Estilo padrão: </b>O texto dentro de code é exibido com uma fonte monoespaçada (ou seja, cada caractere ocupa a mesma quantidade de espaço horizontal).</li>
+                        <li id="exemplo">
+                            <b>Exemplo:</b>
+                            <p>Para imprimir "Hello, World!" no console, use o seguinte comando:
+                                <br>
+                                <br>
+                                <code>
+                                    console.log("Hello, World!");
+                                </code>
+                            </p>                  
+                        </li>
+                        Neste exemplo, console.log("Hello, World!"); será exibido em uma fonte monoespaçada, destacando-o como um trecho de código.
+                    </ul>
+                                
+            <p><b>2.2. Kbd</b></p>
+                O kbd é usado para representar a entrada de teclado. Este elemento indica texto que o usuário deve digitar em um teclado.
+                    <ul>
+                        <li><b>Uso principal: </b>Indicar teclas que devem ser pressionadas pelo usuário.</li>
+                        <li><b>Estilo padrão: </b>O texto dentro de kbd também é exibido com uma fonte monoespaçada, semelhante ao code.</li>
+                        <li id="exemplo">
+                            <b>Exemplo:</b>
+                            <p>Para copiar o texto selecionado, pressione <kbd>Ctrl</kbd> + <kbd>C</kbd>.</p>
+                        </li>
+                        Neste exemplo, "Ctrl" e "C" são destacados como teclas que o usuário deve pressionar, geralmente em uma combinação de atalhos de teclado.
+                    </ul>
+            
+            <p><b>2.3. Pre</b></p>
+                O pre é utilizado para definir texto pré-formatado. Este elemento preserva espaços em branco, quebras de linha e formatação do texto dentro dele.
+                    <ul>
+                        <li><b>Uso principal: </b>Exibir texto com formatação exata, como poesia, arte ASCII, ou código com indentação específica.</li>
+                        <li><b>Estilo padrão: </b>O texto dentro de pre é exibido com uma fonte monoespaçada e a formatação original é mantida.</li>
+                        <li id="exemplo"><b>Exemplo:</b>
+                            <pre>
+                                function greet() {
+                                    console.log("Hello, World!");
+                                }
+                            </pre>   
+                        </li>
+                        Neste exemplo, a função JavaScript é exibida com a indentação original preservada, tornando o código mais legível e organizado.
+                    </ul>        
+
+
+        <h3 id="ds"><strong>3. Details e summary</strong></h3>
+            Os elementos HTML details e summary são usados para criar seções de conteúdo que o usuário pode expandir e recolher.
+
+            <p><b>3.1. Details</b></p>
+                O elemento details é utilizado para especificar informações adicionais que o usuário pode visualizar ou ocultar. Ele cria uma caixa expansível que pode conter qualquer tipo de conteúdo HTML.
+                    <p><b>Exemplo:</b></p>
+                        <details id="exemplo"> <!-- Cria um elemento expansível -->
+                            <p>Este é um parágrafo com informações adicionais que podem ser visualizadas quando o usuário expande a seção.</p>
+                        </details>
+                
+            <br>            
+            <b>3.2. Summary</b></p>
+                O elemento <code>summary</code> é utilizado para fornecer um resumo, título ou rótulo que é visível para o usuário e que pode ser clicado para expandir ou recolher o conteúdo do <code>details</code>.  
+
+                    <p><b>Exemplos:</b></p>
+                        <details id="exemplo"> <!-- Cria um elemento expansível -->
+                            <summary>Mais Informações</summary> <!-- Título que pode ser clicado para expandir/recolher o conteúdo -->
+                            <p>Este é um parágrafo com informações adicionais que podem ser visualizadas quando o usuário expande a seção.</p> <!-- Parágrafo com informações adicionais que aparecem quando o usuário expande o <details> -->
+                        </details>
+                        
+                        <br>
+                        <details id="exemplo"> <!-- Outro exemplo de elemento expansível -->
+                            <summary>Detalhes do Produto</summary> <!-- Título para expandir/recolher -->
+                            <ul> <!-- Lista não ordenada de itens adicionais -->
+                                <li>Produto A</li> <!-- Item da lista dentro do <details> -->
+                                <li>Produto B</li> <!-- Outro item da lista -->
+                                <li>Produto C</li> <!-- Outro item da lista -->
+                            </ul>
+                        </details>
+                 
+
+
+        <h3 id="mp"><strong>4. Meter e progress</strong></h3>
+            <p>Os elementos HTML <code>meter</code> e <code>progress</code> são usados para representar dados e progresso em interfaces web, mas têm propósitos distintos.</p>
+
+                <b>4.1. Meter</b></p>
+                    O elemento <code>meter</code>representa uma medição escalar em um intervalo conhecido, ou uma fração de um valor. Ele é utilizado para exibir um valor dentro de uma faixa específica, como a quantidade de espaço em disco usado, o nível de bateria, ou a força de um sinal.
+                    <p><b>Atributos principais:</b></p>
+                        <ul>
+                            <li><b>min: </b>O valor mínimo do intervalo.</li>
+                            <li><b>max: </b>O valor máximo do intervalo.</li>
+                            <li><b>value: </b>O valor atual.</li>
+                            <li><b>low e high: </b>Definem limites onde o valor é considerado baixo ou alto.</li>
+                            <li><b>optimum: </b>Define o valor considerado ótimo.</li>
+                        </ul>
+                    <b>Exemplo:</b>
+                        <ul>
+                            <p>Força do sinal Wi-Fi:</p>
+                            <meter value="0.7" min="0" max="1" low="0.25" high="0.75" optimum="1">70%</meter> <!-- Representa a força do sinal Wi-Fi em 70% --></ul>
+                            <!-- 
+                            <meter>: Cria um elemento de medição.
+                            value="0.7": O valor atual é 70%.
+                            min="0": O valor mínimo é 0.
+                            max="1": O valor máximo é 1 (ou 100%).
+                            low="0.25": Valores abaixo de 25% são considerados baixos.
+                            high="0.75": Valores acima de 75% são considerados altos.
+                            optimum="1": O valor ideal é 100%.
+                            "70%": Texto alternativo exibido se o navegador não suportar <meter>.
+                            -->
+
+
+
+                <b>4.2. Progress</b></p>
+                    O elemento <code>progress </code>representa o progresso de uma tarefa, como um carregamento de arquivo ou um progresso de download. Ele é usado para indicar o andamento de uma tarefa que está em progresso.
+                        <p><b>Atributos principais:</b></p>
+                            <ul>
+                                <li><b>max: </b>O valor máximo do progresso (padrão é 1).</li>
+                                <li><b>value:  </b>O valor atual do progresso.</li>
+                            </ul>
+                        <b>Exemplo:</b>
+                            <ul>
+                                <p>Progresso do download:</p>
+                                <progress value="0.4" max="1">40%</progress>
+                                <!-- Representa o progresso de download em 40% -->
+                            </ul>
+                            <!--
+                            <progress>: Cria uma barra de progresso.
+                            value="0.4": O valor atual do progresso é 40%.
+                            max="1": O valor máximo do progresso é 1 (ou 100%).
+                            "40%": Texto alternativo exibido se o navegador não suportar <progress>.
+                            -->          
+      
+                           
+        <h3 id="mj"><strong>5. Mark e Javascript</strong></h3>
+
+            <b>5.1. Mark</b></p>
+                O elemento HTML<code> mark </code>é usado para destacar partes do texto, como se fosse um marcador amarelo. Ele é útil para chamar a atenção do usuário para partes importantes ou para destacar palavras-chave em um contexto específico.
+
+                <p>Exemplo:</p>
+                    <p>O elemento <mark>HTML mark<mark></mark> é usado para destacar texto.</p>
+                    <!-- 
+                        <mark>: Envolve o texto que deve ser destacado.
+                        O texto "HTML <mark>" será destacado como se fosse marcado com um marcador.
+                    -->
+
+            <b>5.2. Javascript</b></p>
+                JavaScript é uma linguagem de programação que permite adicionar interatividade e comportamento dinâmico às páginas web. Ele pode ser usado para validar formulários, criar animações, manipular elementos DOM (Document Object Model), e muito mais.
+    
+                <p>Exemplo:</p>
+                    <script>
+                        // Função JavaScript que muda o conteúdo do parágrafo
+                        function changeText() {
+                            document.getElementById("myParagraph").innerHTML = "O texto foi alterado!";
+                            // document.getElementById("myParagraph"): Seleciona o elemento com id "myParagraph".
+                            // .innerHTML = "O texto foi alterado!": Altera o conteúdo HTML do parágrafo selecionado.
+                        }
+                    </script>
+                    <p id="myParagraph">Este é um parágrafo.</p> <!-- Parágrafo cujo conteúdo será alterado -->
+                    <!-- <p id="myParagraph">: Define um parágrafo com o id "myParagraph". -->
+                    
+                    <button onclick="changeText()">Clique aqui</button> <!-- Botão que chama a função JavaScript quando clicado -->
+                    <!-- <button onclick="changeText()">: Define um botão que chama a função changeText() quando clicado. -->       
+        
+           
+        <h3 id="canvas"><strong>6. Canvas</strong></h3>
+            O elemento HTML <code>canvas</code> é usado para desenhar gráficos, gráficos interativos, animações, jogos e outras renderizações visuais usando JavaScript. O <code>canvas</code> cria uma área de desenho em HTML5 que pode ser manipulada através de um contexto de desenho (como 2D ou WebGL para gráficos 3D).
+
+            <p><b>Estrutura Básica:</b></p>
+                O <code>canvas</code> por si só não desenha nada visualmente. Ele é simplesmente um contêiner para gráficos. Para desenhar, você deve usar JavaScript para acessar a API de desenho.
+
+            <p><b>Exemplo Básico de <code>canvas:</code></b></p>
+                Aqui está um exemplo básico que desenha um retângulo vermelho em um <code>canvas:</code>
+                <br>
+                <br>
+
+                    <canvas id="myCanvas" width="300" height="200" style="border:1px solid #000000;"></canvas>
+                    <!-- 
+                        <canvas>: Cria um elemento de desenho.
+                        id="myCanvas": Define um identificador único para o canvas.
+                        width="500": Define a largura do canvas em pixels.
+                        height="400": Define a altura do canvas em pixels.
+                        style="border:1px solid #000000;": Adiciona uma borda preta ao redor do canvas.
+                    -->
+
+                    <script>
+                        // Acessa o elemento canvas pelo ID e obtém o contexto de desenho 2D
+                        var canvas = document.getElementById("myCanvas");
+                        var ctx = canvas.getContext("2d");
+                        
+                        // Define a cor de preenchimento como vermelho
+                        ctx.fillStyle = "#FF0000";
+                        
+                        // Desenha um retângulo vermelho na posição (50, 50) com 150 pixels de largura e 100 pixels de altura
+                        ctx.fillRect(50, 50, 150, 100);
+                    </script>
+                    <!--
+                        var canvas = document.getElementById("myCanvas");: Obtém o elemento <canvas> pelo seu ID.
+                        var ctx = canvas.getContext("2d");: Obtém o contexto de desenho 2D do canvas.
+                        ctx.fillStyle = "#FF0000";: Define a cor de preenchimento para vermelho.
+                        ctx.fillRect(50, 50, 150, 100);: Desenha um retângulo preenchido na posição (50, 50) com largura de 150 pixels e altura de 100 pixels.
+                    -->
+
+            <p><b>Recursos Avançados:</b></p>
+                O <code>canvas</code> suporta uma variedade de métodos para desenhar formas, imagens, texto e muito mais. Aqui estão alguns exemplos de métodos adicionais:
+                    <ul>
+                        <b>Desenhar um Círculo:</b>
+                            <code>
+                                <br>
+                                ctx.beginPath();
+                                <br>
+                                ctx.arc(200, 200, 40, 0, 2 * Math.PI);
+                                <br>
+                                ctx.fillStyle = "#0000FF";
+                                <br>
+                                ctx.fill();
+                                <br>
+                            </code>
+                    </ul>
+
+                    <ul>
+                        <b>Desenhar Texto:</b>
+                            <code>
+                                <br>
+                                ctx.font = "30px Arial";
+                                <br>
+                                ctx.fillText("Olá, Canvas!", 10, 50);
+                                <br>
+                            </code>
+                    </ul>
+
+                    <ul>
+                        <b>Desenhar uma Linha:</b>
+                            <code>
+                                <br>
+                                ctx.beginPath();
+                                <br>
+                                ctx.moveTo(50, 150);
+                                <br>
+                                ctx.lineTo(200, 300);
+                                <br>
+                                ctx.stroke();
+                                <br>
+                            </code>
+                    </ul>
+
+                    <ul>
+                        <p><b>Game:</b></p>
+                        <a href="game/game.html" target="_blank">Game aqui!</a>
+                    </ul>
+          
+                    
+        <h3 id="atributos"><strong>7. Novos atributos do HTML 5</strong></h3>
+            HTML5 introduziu várias melhorias e mudanças em relação ao HTML4, visando melhorar a semântica, a interoperabilidade, a multimídia, e a interação com as páginas web. Aqui estão as principais diferenças:
+
+            <b>7.1. Novos Elementos Semânticos</b></p>
+                <p>HTML5 introduziu novos elementos que fornecem uma estrutura mais significativa e semântica para os documentos HTML:</p>
+                    <ul>
+                        <li><b>header, footer: </b>Definem cabeçalhos e rodapés de seções ou da página.</li>
+                        <li><b>article: </b>Representa um conteúdo autônomo que pode ser distribuído independentemente.</li>
+                        <li><b>section: </b>Define seções genéricas de conteúdo.</li>
+                        <li><b>nav: </b>Representa um conjunto de links de navegação.</li>
+                        <li><b>aside: </b>Representa conteúdo tangencialmente relacionado ao conteúdo principal.</li>
+                        <li><b>main: </b>Define o conteúdo principal do documento.</li>
+                        <li><b>figure, figcaption: </b>Usados para marcar figuras e suas legendas.</li>
+                    </ul>
+
+            <b>7.2. Suporte Nativo para Multimídia</b></p>
+                <p>HTML5 inclui novos elementos para incorporar conteúdo multimídia diretamente:</p>
+                    <ul>
+                        <li><b>audio: </b>Embute conteúdo de áudio.</li>
+                        <li><b>video: </b>Embute conteúdo de vídeo.</li>
+                    </ul>
+
+            <b>7.3. Novos Tipos de Input e Atributos de Formulário</b></p>
+                <p>HTML5 introduziu novos tipos de input e atributos para formulários, melhorando a usabilidade e a validação:</p>
+                    <ul>
+                        <li><b>Novos tipos de input: </b>email, url, number, range, date, time, color, entre outros.</li>
+                        <li><b>Novos atributos: </b>placeholder, required, autofocus, pattern, min, max, step.</li>
+                    </ul>   
+
+            <b>7.4. APIs e Funcionalidades JavaScript</b></p>
+                <p>HTML5 inclui várias novas APIs que permitem funcionalidades avançadas diretamente no navegador:</p>
+                    <ul>
+                        <li><b>Canvas API: </b>Para desenhar gráficos 2D e 3D.</li>
+                        <li><b>Web Storage API: </b>localStorage e sessionStorage para armazenamento local de dados.</li>
+                        <li><b>Geolocation API: </b>Para acessar a localização geográfica do usuário.</li>
+                        <li><b>Web Workers: </b>Para executar scripts em segundo plano sem bloquear a interface do usuário.</li>
+                        <li><b>Web Sockets: </b>Para comunicação bidirecional em tempo real.</li>
+                        <li><b>Offline Application Cache: </b>Permite que aplicações web funcionem offline.</li>
+                    </ul>  
+
+            <b>7.5. Melhorias na Semântica e Acessibilidade</b></p>
+                <p>HTML5 promoveu uma melhor semântica e acessibilidade ao introduzir elementos mais descritivos e ao exigir uma estrutura de documento mais rigorosa. Isso facilita a interpretação do conteúdo por motores de busca e tecnologias assistivas.</p>        
+                
+            <b>7.6. Remoção de Elementos e Atributos Obsoletos</b></p>
+                <p>HTML5 descontinuou alguns elementos e atributos que estavam presentes no HTML4, encorajando o uso de CSS e JavaScript para estilização e comportamento:</p>
+                    <ul>
+                        <li><b>Elementos removidos: </b>font, center, big, blink, marquee.</li>
+                        <li><b>Atributos removidos: </b>align, bgcolor, border (em alguns contextos), entre outros.</li>
+                    </ul>   
+
+            <b>7.7. Compatibilidade e Suporte para Mobilidade</b></p>
+                <p>HTML5 foi projetado com foco em compatibilidade com dispositivos móveis e responsividade. Ele oferece uma base sólida para o desenvolvimento de aplicações web modernas que funcionam em uma variedade de dispositivos e tamanhos de tela.</p>
+
+
+            <b>7.8. Resumo</b></p>
+                <ul>
+                    <li><b>Elementos Semânticos: </b>HTML5 introduz elementos que melhoram a estrutura e a semântica do documento.</li>
+                    <li><b>Multimídia: </b>Suporte nativo para áudio e vídeo.</li>
+                    <li><b>Formulários: </b>Novos tipos de input e atributos que facilitam a criação e validação de formulários.</li>
+                    <li><b>APIs JavaScript: </b>APIs avançadas para gráficos, armazenamento, geolocalização, e mais.</li>
+                    <li><b>Acessibilidade: </b>Melhor suporte a tecnologias assistivas e melhores práticas semânticas.</li>
+                    <li><b>Modernização: </b>Remoção de elementos obsoletos e maior foco em CSS e JavaScript para estilização e comportamento.</li>
+                </ul>
+
+                
+                <p><b>Exemplo:</b></p>
+
+                    <hr>
+                    <header>
+                        <h1>Bem-vindo ao Meu Site</h1>
+                        <nav>
+                            <ul>
+                                <li><a href="#home">Início</a></li>
+                                <li><a href="#about">Sobre</a></li>
+                                <li><a href="#contact">Contato</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                    
+                    <main>
+                        <section id="home">
+                            <article>
+                                <header>
+                                    <h2>Artigo Principal</h2>
+                                </header>
+                                <p>Este é um exemplo de um artigo principal. HTML5 traz muitas melhorias para a web.</p>
+                                <figure>
+                                    <img src="example.jpg" alt="Exemplo de Imagem">
+                                    <figcaption>Figura 1: Exemplo de Imagem</figcaption>
+                                </figure>
+                                <p>Além disso, podemos incluir vídeos e áudios de forma nativa.</p>
+                                <video controls width="500">
+                                    <source src="example.mp4" type="video/mp4">
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                                <p>E também áudios:</p>
+                                <audio controls>
+                                    <source src="example.mp3" type="audio/mp3">
+                                    Seu navegador não suporta a tag de áudio.
+                                </audio>
+                            </article>
+                        </section>
+                    
+                        <section id="about">
+                            <h2>Sobre</h2>
+                            <p>Este site é um exemplo de uso dos novos elementos do HTML5.</p>
+                            <aside>
+                                <h3>Nota</h3>
+                                <p>HTML5 melhora a semântica e a estrutura das páginas web.</p>
+                            </aside>
+                        </section>
+                    
+                        <section id="contact">
+                            <h2>Contato</h2>
+                            <form>
+                                <label for="name">Nome:</label>
+                                <input type="text" id="name" name="name" required>
+                    
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                    
+                                <label for="dob">Data de Nascimento:</label>
+                                <input type="date" id="dob" name="dob">
+                    
+                                <label for="color">Cor Favorita:</label>
+                                <input type="color" id="color" name="color">
+                    
+                                <label for="range">Nível de Satisfação:</label>
+                                <input type="range" id="range" name="range" min="0" max="10">
+                    
+                                <button type="submit">Enviar</button>
+                            </form>
+                        </section>
+                    </main>
+                    
+                    <footer>
+                        <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+                        <br>
+                    </footer>
+                    
+                    <script>
+                        // Exemplo de uso da API de Geolocalização
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(showPosition);
+                        } else {
+                            console.log("Geolocalização não é suportada por este navegador.");
+                        }
+                    
+                        function showPosition(position) {
+                            console.log("Latitude: " + position.coords.latitude + 
+                                        " Longitude: " + position.coords.longitude);
+                        }
+                    
+                        // Exemplo de uso do localStorage
+                        localStorage.setItem("visitCount", (parseInt(localStorage.getItem("visitCount")) || 0) + 1);
+                        console.log("Você visitou esta página " + localStorage.getItem("visitCount") + " vezes.");
+                    </script>
+                    <hr>
+    </div>
+
+    <div id="footer">
+        <a href="https://github.com/paulaalessandrars" target="_blank" rel="noopener noreferrer">&copy; 2024 Paula Alessandra. Todos os direitos reservados.</a> <!-- Link para GitHub, abrindo em uma nova aba -->
+    </div>
+</body>
+</html>

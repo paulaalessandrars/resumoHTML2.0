@@ -1,0 +1,366 @@
+/* Estilização geral */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão para Arial ou sans-serif */
+    margin: 0; /* Remove a margem padrão do body */
+    padding: 0; /* Remove o padding padrão do body */
+    background-color: rgb(255, 207, 170); /* Define a cor de fundo do body */
+    display: flex; /* Usa flexbox para o layout do body */
+    flex-direction: column; /* Define a direção do flex como coluna */
+    height: 100vh; /* Define a altura da tela */
+    overflow: hidden; /* Remove a barra de rolagem */
+}
+
+
+
+/* Estilização do cabeçalho */
+#header {
+    width: 100%; /* Define a largura do cabeçalho como 100% */
+    background-color: #dd6f16; /* Define a cor de fundo do cabeçalho como branco */
+    text-align: center; /* Centraliza o texto no cabeçalho */
+    padding: 20px 0; /* Adiciona padding superior e inferior de 20px */
+    flex-shrink: 0; /* Impede que o cabeçalho encolha */
+}
+
+#header h1 {
+    color: rgb(243, 243, 242); /* Define a cor do texto do h1 */
+    margin: 0; /* Remove a margem do h1 */
+    text-align: center; /* Move o h1 um pouco para a direita */
+}
+
+
+
+/* Estilização do menu alinhado à esquerda */
+#menu {
+    background-color: #f58529; /* Define a cor de fundo do menu */
+    padding: 15px; /* Adiciona padding interno de 15px */
+    text-align: left; /* Alinha o texto à esquerda */
+    width: 200px; /* Define a largura do menu */
+    position: fixed; /* Define o menu como fixo */
+    top: 77px; /* Define a posição do menu abaixo do cabeçalho */
+    left: 0; /* Define a posição do menu à esquerda */
+    bottom: 0; /* Define a altura do menu até o rodapé */
+    overflow: auto; /* Adiciona rolagem se o conteúdo exceder a altura */
+}
+
+#menu a {
+    display: block; /* Define os links como blocos para preencher toda a largura */
+    color: white; /* Define a cor do texto dos links como branco */
+    padding: 16px 17px; /* Adiciona padding interno nos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Define o texto dos links como negrito */
+}
+
+#menu a:hover {
+    background-color: #333; /* Muda a cor de fundo ao passar o mouse */
+    color: white; /* Mantém a cor do texto como branco */
+}
+
+
+
+/* Estilização do conteúdo */
+#content {
+    margin-left: 260px; /* Adiciona margem à esquerda para espaço do menu */
+    padding: 20px; /* Adiciona padding interno de 20px */
+    flex-grow: 1; /* Permite que o conteúdo cresça para preencher o espaço disponível */
+    overflow: auto; /* Adiciona rolagem ao conteúdo */
+}
+
+#content img {
+    margin-left: 100px; /* Adiciona margem à esquerda para espaço do menu */
+    padding: 20px; /* Adiciona padding interno de 20px */
+    flex-grow: 1; /* Permite que o conteúdo cresça para preencher o espaço disponível */
+    width: 800px; /* Define a largura do conteúdo */
+    height: 350px; /* Define a altura do conteúdo */
+    overflow: auto; /* Adiciona rolagem ao conteúdo */
+}
+
+
+
+/* Estilização do rodapé */
+#footer {
+    background-color: #dd6f16; /* Define a cor de fundo do rodapé */
+    color: rgb(245, 233, 233); /* Define a cor do texto do rodapé como branco */
+    padding: 17px 0; /* Adiciona padding superior e inferior de 10px */
+    width: 100%; /* Define a largura do rodapé como 100% */
+    position: absolute; /* Define o rodapé como absoluto */
+    bottom: 0; /* Fixa o rodapé na parte inferior da tela */
+    text-align: center; /* Centraliza o texto no rodapé */
+    flex-shrink: 0; /* Impede que o rodapé encolha */
+}
+
+#footer a {
+    background-color: #dd6f16; /* Define a cor de fundo do rodapé */
+    color: rgb(245, 233, 233); /* Define a cor do texto do rodapé como branco */
+    
+}
+
+
+
+/* Estilização de links */
+a {
+    color: black; /* Define a cor dos links como preto */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+
+
+/* Estilização das listas */
+ol {
+    list-style-type: none; /* Remove os marcadores padrão das listas ordenadas */
+    padding: 0; /* Remove o padding padrão das listas ordenadas */
+    margin: 0; /* Remove a margem padrão das listas ordenadas */
+}
+
+ol > li {
+    padding: 10px; /* Adiciona padding interno de 10px nos itens da lista */
+    background-color: white; /* Define a cor de fundo dos itens da lista como branco */
+    border-bottom: 1px solid #ccc; /* Adiciona uma borda inferior aos itens da lista */
+}
+
+ol > li h3 {
+    margin: 0; /* Remove a margem do h3 */
+    padding: 10px 0; /* Adiciona padding superior e inferior de 10px */
+    color: #333; /* Define a cor do texto do h3 */
+}
+
+ol > li ul {
+    list-style-type: none; /* Remove os marcadores padrão das listas não ordenadas */
+    padding-left: 20px; /* Adiciona padding à esquerda nas listas não ordenadas */
+}
+
+ol > li ul > li {
+    margin: 5px 0; /* Adiciona margem superior e inferior de 5px nos itens da lista não ordenada */
+}
+
+ol > li ul > li h4 {
+    margin: 0; /* Remove a margem do h4 */
+    color: #444; /* Define a cor do texto do h4 */
+}
+
+ol > li ul > li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #444; /* Define a cor do texto dos links */
+}
+
+ol > li ul > li a:hover h4 {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse sobre o h4 */
+}
+
+ul {
+    padding: 5px; /* Adiciona padding interno de 10px nos itens da lista */
+    margin-left: 30px;
+}
+
+ul > li {
+    padding: 5px; /* Adiciona padding interno de 10px nos itens da lista */
+}
+
+h3 {
+    padding-top: 15px;
+}
+
+
+/* Estilização de #nave */
+#nave header { /* Seleciona o elemento <header> que é descendente do elemento com o ID #nave */
+    background-color: #ff3700bf; /* Define a cor de fundo do <header> */
+    padding: 20px; /* Adiciona padding interno de 20px ao <header> */
+}
+
+/* Ao passar o mouse sobre o header exibirá um aviso na parte de cima do header*/
+#nave header:hover::before { 
+    content: "Você passou o mouse sobre o header! Tudo em laranja é header."; /* Define o texto que será inserido antes do conteúdo do <header> */
+    color: black; /* Define a cor do texto do pseudo-elemento como preto */
+    background-color: white; /* Define a cor de fundo do pseudo-elemento como branco */
+}
+
+#nave nav { /* Seleciona o elemento <header> que é descendente do elemento com o ID #nave */
+    background-color: #68ff03d6; /* Define a cor de fundo do <header> */
+    padding: 20px; /* Adiciona padding interno de 20px ao <header> */
+}
+
+/* Ao passar o mouse sobre o nav exibirá um aviso na parte de cima do nav*/
+#nave nav:hover::before { 
+    content: "Você passou o mouse sobre o nav! Tudo em verde é nav."; /* Define o texto que será inserido antes do conteúdo do <nsv> */
+    color: black; /* Define a cor do texto do pseudo-elemento como preto */
+    background-color: white; /* Define a cor de fundo do pseudo-elemento como branco */
+}
+
+#nave main{
+    background-color:#e7c429;
+    padding: 20px; /* Adiciona padding interno de 20px */   
+}
+
+/* Ao passar o mouse sobre o main exibirá um aviso na parte de cima do main*/
+#nave main:hover::before { 
+    content: "Você passou o mouse sobre o main! Tudo em amarelo é main."; /* Define o texto que será inserido antes do conteúdo do <main> */
+    color: black; /* Define a cor do texto do pseudo-elemento como preto */
+    background-color: white; /* Define a cor de fundo do pseudo-elemento como branco */
+}
+
+#nave footer{
+    background-color:#b66219;
+    padding: 20px; /* Adiciona padding interno de 20px */   
+}
+
+/* Ao passar o mouse sobre o footer exibirá um aviso na parte de cima do footer*/
+#nave footer:hover::before { 
+    content: "Você passou o mouse sobre o footer! Tudo em marrom é footer."; /* Define o texto que será inserido antes do conteúdo do <footer> */
+    color: black; /* Define a cor do texto do pseudo-elemento como preto */
+    background-color: white; /* Define a cor de fundo do pseudo-elemento como branco */
+}
+
+#nave aside{
+    background-color:#968f89;
+    padding: 20px; /* Adiciona padding interno de 20px */  
+}
+
+/* Ao passar o mouse sobre o aside exibirá um aviso na parte de cima do aside*/
+#nave aside:hover::before { 
+    content: "Você passou o mouse sobre o aside! Tudo em cinza é aside."; /* Define o texto que será inserido antes do conteúdo do <aside> */
+    color: black; /* Define a cor do texto do pseudo-elemento como preto */
+    background-color: white; /* Define a cor de fundo do pseudo-elemento como branco */
+}
+
+#nave li{
+    background-color:#aacaea;
+    padding: 20px; /* Adiciona padding interno de 20px */   
+}
+
+/* Ao passar o mouse sobre o li exibirá um aviso na parte de cima do li*/
+#nave li:hover::before { 
+    content: "Você passou o mouse sobre o li! Tudo em azul é li."; /* Define o texto que será inserido antes do conteúdo do <li> */
+    color: black; /* Define a cor do texto do pseudo-elemento como preto */
+    background-color: white; /* Define a cor de fundo do pseudo-elemento como branco */
+}
+
+#nave ul{
+    background-color:#a6325d;
+    padding: 20px; /* Adiciona padding interno de 20px */   
+}
+
+/* Ao passar o mouse sobre o ul exibirá um aviso na parte de cima do ul*/
+#nave ul:hover::before { 
+    content: "Você passou o mouse sobre o ul! Tudo em bordo é ul."; /* Define o texto que será inserido antes do conteúdo do <ul> */
+    color: black; /* Define a cor do texto do pseudo-elemento como preto */
+    background-color: white; /* Define a cor de fundo do pseudo-elemento como branco */
+    padding: auto;
+}
+
+#nave article{
+    background-color: #e84ec1;
+    padding: 20px; /* Adiciona padding interno de 20px */ 
+    color: black;  
+}
+
+/* Ao passar o mouse sobre o article exibirá um aviso na parte de cima do article*/
+#nave article:hover::before { 
+    content: "Você passou o mouse sobre o article! Tudo em rosa é article."; /* Define o texto que será inserido antes do conteúdo do <article> */
+    color: black; /* Define a cor do texto do pseudo-elemento como preto */
+    background-color: white; /* Define a cor de fundo do pseudo-elemento como branco */
+    padding: auto;
+}
+
+#nave blockquote{
+    background-color:#21509c;
+    padding: 20px; /* Adiciona padding interno de 20px */   
+}
+
+/* Ao passar o mouse sobre o blockquote exibirá um aviso na parte de cima do blockquote*/
+#nave blockquote:hover::after { 
+    content: "Você passou o mouse sobre o blockquote! Tudo em azul é blockquote."; /* Define o texto que será inserido antes do conteúdo do <blockquote> */
+    color: black; /* Define a cor do texto do pseudo-elemento como preto */
+    background-color: white; /* Define a cor de fundo do pseudo-elemento como branco */
+    padding: auto;
+}
+
+#nave q{
+    background-color:#1bb920;
+    padding: 20px; /* Adiciona padding interno de 20px */   
+}
+
+/* Ao passar o mouse sobre o q exibirá um aviso na parte de cima do q*/
+#nave q:hover::after { 
+    content: "Você passou o mouse sobre o q! Tudo em verde é q."; /* Define o texto que será inserido antes do conteúdo do <q> */
+    color: black; /* Define a cor do texto do pseudo-elemento como preto */
+    background-color: white; /* Define a cor de fundo do pseudo-elemento como branco */
+    padding: auto;
+}
+
+#nave figure{
+    background-color:#ea7ddc;
+    padding: 20px; /* Adiciona padding interno de 20px */   
+}
+
+/* Ao passar o mouse sobre o figure exibirá um aviso na parte de cima do figure*/
+#nave figure:hover::before { 
+    content: "Tudo em roxo é figure."; /* Define o texto que será inserido antes do conteúdo do <figure> */
+    color: black; /* Define a cor do texto do pseudo-elemento como preto */
+    background-color: white; /* Define a cor de fundo do pseudo-elemento como branco */
+    padding: 0px;
+}
+
+#nave picture{
+    background-color:#c5ec18;
+    padding: 20px; /* Adiciona padding interno de 20px */   
+}
+
+/* Ao passar o mouse sobre o figure exibirá um aviso na parte de cima do figure*/
+#nave picture:hover::after { 
+    content: "Tudo em verde é picture."; /* Define o texto que será inserido antes do conteúdo do <figure> */
+    color: black; /* Define a cor do texto do pseudo-elemento como preto */
+    background-color: white; /* Define a cor de fundo do pseudo-elemento como branco */
+    padding: auto;
+}
+
+#nave figcaption{
+    background-color:#ffba25;
+    padding: 20px; /* Adiciona padding interno de 20px */   
+}
+
+/* Ao passar o mouse sobre o figure exibirá um aviso na parte de cima do figure*/
+#nave figcaption:hover::after { 
+    content: "Tudo em laranja é figcaption."; /* Define o texto que será inserido antes do conteúdo do <figure> */
+    color: black; /* Define a cor do texto do pseudo-elemento como preto */
+    background-color: white; /* Define a cor de fundo do pseudo-elemento como branco */
+    padding: auto;
+}
+
+
+#exemplo p { /* Seleciona todos os elementos <p> dentro do elemento com o id "exemplo" */
+    background-color: whitesmoke; /* Define a cor de fundo como "whitesmoke" */
+    padding: 20px; /* Adiciona 20 pixels de espaço interno (padding) em todos os lados do parágrafo */
+    width: 500px; /* Define a largura do parágrafo como 400 pixels */
+    margin-left: 100px; /* Adiciona uma margem à esquerda de 100 pixels, movendo o parágrafo para a direita */
+}
+
+#exemplo input { /* Seleciona todos os elementos <p> dentro do elemento com o id "exemplo" */
+    background-color: whitesmoke; /* Define a cor de fundo como "whitesmoke" */
+    padding: 10px; /* Adiciona 20 pixels de espaço interno (padding) em todos os lados do parágrafo */
+    width: 100px; /* Define a largura do parágrafo como 400 pixels */
+    margin-left: 20px; /* Adiciona uma margem à esquerda de 100 pixels, movendo o parágrafo para a direita */
+}
+
+#exemplo pre { /* Seleciona todos os elementos <p> dentro do elemento com o id "exemplo" */
+    background-color: whitesmoke; /* Define a cor de fundo como "whitesmoke" */
+    color: blue;
+    padding: 20px; /* Adiciona 10 pixels de espaço interno (padding) em todos os lados do parágrafo */
+    width: 500px; /* Define a largura do parágrafo como 400 pixels */
+    margin-left: 100px; /* Adiciona uma margem à esquerda de 100 pixels, movendo o parágrafo para a direita */
+}
+
+kbd {
+    border: solid 1px black;
+}
+
+code {
+    color: black;
+    background-color:rgb(221, 218, 218);
+}
+
+details {
+    color:#21509c
+}

@@ -1,0 +1,86 @@
+/* Estilização geral */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão para Arial ou sans-serif */
+    margin: 0; /* Remove a margem padrão do body */
+    padding: 0; /* Remove o padding padrão do body */
+    background-color: rgb(255, 207, 170); /* Define a cor de fundo do body */
+    display: flex; /* Usa flexbox para o layout do body */
+    flex-direction: column; /* Define a direção do flex como coluna */
+    min-height: 100vh; /* Define a altura mínima do body como 100% da altura da viewport */
+    overflow: hidden; /* Remove as barras de rolagem da página */
+}
+
+/* Estilização do cabeçalho */
+#header {
+    width: 100%; /* Define a largura do cabeçalho como 100% */
+    background-color: #dd6f16; /* Define a cor de fundo do cabeçalho */
+    text-align: center; /* Centraliza o texto no cabeçalho */
+    padding: 20px 0; /* Adiciona padding superior e inferior de 20px */
+    flex-shrink: 0; /* Impede que o cabeçalho encolha */
+}
+
+#header h1 {
+    color: rgb(243, 243, 242); /* Define a cor do texto do h1 */
+    margin: 0; /* Remove a margem do h1 */
+}
+
+/* Estilização do menu */
+#menu {
+    background-color: #f58529; /* Define a cor de fundo do menu */
+    text-align: center; /* Centraliza o texto no menu */
+    padding: 5px; /* Adiciona padding interno de 15px */
+    display: flex; /* Usa flexbox para o layout do menu */
+    justify-content: center; /* Centraliza os itens do menu horizontalmente */
+    align-items: center; /* Centraliza os itens do menu verticalmente */
+    width: 100%; /* Define a largura do menu como 100% */
+    padding-bottom: 100px;
+    
+}
+
+#menu ul {
+    list-style: none; /* Remove os marcadores padrão da lista */
+    padding: 0; /* Remove o padding padrão da lista */
+    margin: 0; /* Remove a margem padrão da lista */
+}
+
+#menu li {
+    margin: 40px 0; /* Aumenta a margem entre os itens do menu */
+}
+
+#menu a {
+    display: block; /* Define os links como blocos para preencher toda a largura */
+    color: #dd6f16; /* Define a cor do texto dos links */
+    padding: 20.5px 40px; /* Aumenta o padding para deixar os links maiores */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Define o texto dos links como negrito */
+    background-color: whitesmoke; /* Define a cor de fundo dos links */
+    border-radius: 5px; /* Adiciona bordas arredondadas aos links */
+    font-size: 1.2em; /* Aumenta o tamanho da fonte dos links */
+}
+
+#menu a:hover {
+    background-color: #333; /* Muda a cor de fundo ao passar o mouse */
+    color: white; /* Define a cor do texto como branco ao passar o mouse */
+}
+
+
+/* Estilização do rodapé */
+footer {
+    background-color: #dd6f16; /* Define a cor de fundo do rodapé */
+    color: rgb(245, 233, 233); /* Define a cor do texto do rodapé como branco */
+    padding: 1px 0; /* Adiciona padding superior e inferior de 10px */
+    width: 100%; /* Define a largura do rodapé como 100% */
+    position: absolute; /* Define o rodapé como absoluto */
+    bottom: 0; /* Fixa o rodapé na parte inferior da tela */
+    text-align: center; /* Centraliza o texto no rodapé */
+    flex-shrink: 0; /* Impede que o rodapé encolha */
+}
+
+footer a {
+    color: white; /* Define a cor dos links como branco */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}

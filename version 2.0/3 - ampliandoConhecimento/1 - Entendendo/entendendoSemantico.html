@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ampliando o Conhecimento</title>
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+</head>
+<body>
+    <div id="header">
+        <h1>Entendendo HTML Semântico</h1>
+    </div>
+
+    <div id="menu">
+        <a href="#semantica" target="_self">Html Semântica</a>
+        <a href="#acessibilidade" target="_self">Acessibilidade</a>
+        <a href="#scraping" target="_self">Web Scraping</a>
+        <a href="#mhf" target="_self">Main, header e footer</a>
+        <a href="#asn" target="_self">Aside, section e nav</a>
+        <a href="#abq" target="_self">Article, blockquote e Q</a>
+        <a href="#ffp" target="_self">Figure, figcaption e picture</a>
+        <a href="#seo" target="_self">O que é SEO</a>
+        <a href="../ampliandoConhecimento.html"><< Voltar</a>
+    </div>
+
+
+    <div id="content"> <!-- Define uma seção de conteúdo com id "content" -->
+
+        <h3 id="semantica"><strong>1. Html Semântica</strong></h3>
+            HTML semântico refere-se ao uso de tags que expressam significado e estrutura adequados ao conteúdo que elas envolvem. Em vez de simplesmente usar tags genéricas para formatar o texto, como div e span, o HTML semântico utiliza tags específicas que descrevem o papel do conteúdo dentro da página. Isso melhora a acessibilidade, a indexação pelos motores de busca e a compreensão do conteúdo por outros desenvolvedores.
+
+            <img src="assets/images/am.PNG" alt="meme image" >
+
+            <h4><strong>1.1. Mudanças no HTML:5</strong></h4>
+
+                O HTML5 trouxe várias mudanças significativas para melhorar a estruturação e a funcionalidade das páginas web:
+
+                        <ul>
+                            <li><b>Tags Semânticas: </b>Introduziu novas tags semânticas como header, footer, nav, article, section, aside, figure, e figcaption, facilitando a criação de layouts mais estruturados e acessíveis.</li>
+                            <li><b>Formulários Melhorados: </b>Adicionou novos tipos de entrada (como email, url, tel) e atributos para validação de formulários, melhorando a experiência do usuário e a precisão dos dados enviados.</li>
+                            <li><b>Áudio e Vídeo Nativos: </b>Suporte integrado para reprodução de áudio e vídeo sem a necessidade de plugins adicionais, através das tags audio e video, com suporte para formatos modernos.</li>
+                            <li><b>Canvas e SVG: </b>Introduziu canvas para desenho gráfico dinâmico via JavaScript e melhorou o suporte para SVG (Scalable Vector Graphics), permitindo gráficos vetoriais escaláveis diretamente na página.</li>
+                            <li><b>Armazenamento Local: </b>Introduziu API para armazenamento local (localStorage e sessionStorage), permitindo que os aplicativos web armazenem dados de forma persistente no navegador do usuário.</li>
+                            <li><b>APIs Avançadas: </b>Incluiu APIs para geolocalização, manipulação de histórico de navegação (history API), web sockets para comunicação em tempo real, entre outras, ampliando as capacidades das aplicações web.</li>
+                            <li><b>Compatibilidade e Desempenho: </b>Focou em melhorar a compatibilidade entre navegadores e aumentar o desempenho das páginas web, oferecendo uma base sólida para o desenvolvimento de aplicações modernas e responsivas.</li>
+                        </ul>
+                    
+                Essas mudanças tornaram o HTML5 uma plataforma mais poderosa e flexível para o desenvolvimento web, facilitando a criação de sites mais interativos, acessíveis e ricos em recursos.
+        
+            <br>
+            <br>
+            <br>
+            <h3 id="acessibilidade"><strong>2. Acessibilidade</strong></h3>
+                <p>A acessibilidade no HTML5 envolve o uso de recursos específicos e melhores práticas para garantir que conteúdos web sejam acessíveis a todos os usuários, incluindo aqueles com deficiências visuais, auditivas, motoras, cognitivas ou outras necessidades especiais. Aqui estão alguns dos principais aspectos e recursos do HTML5 relacionados à acessibilidade:</p>
+
+                    <b>2.1. Elementos Semânticos: </b>O HTML5 introduziu uma série de novos elementos semânticos que ajudam na estruturação clara e significativa do conteúdo da página. Isso não apenas melhora a SEO, mas também facilita a navegação para usuários de tecnologias assistivas. Exemplos incluem header, nav, main, section, article, aside, footer, entre outros.
+
+                        <p><b>Exemplo:</b></p>
+                            <code id="nave">
+                                <header>
+                                    <h1>Logo da Empresa</h1>
+                                    <nav>
+                                        <h2>Menu de navegação</h2>
+                                        <ul>
+                                            <li><a href="index.html">Página Inicial</a></li>
+                                            <li><a href="sobre.html">Sobre</a></li>
+                                            <li><a href="contato.html">Contato</a></li>
+                                        </ul>
+                                    </nav>
+                                </header>
+                                
+                                <main>
+                                    <section>
+                                    <h2>Artigo Principal</h2>
+                                    <article>
+                                        <h3>Título do Artigo</h3>
+                                        <p>Conteúdo do artigo...</p>
+                                    </article>
+                                    </section>
+                                </main>
+                                
+                                <footer>
+                                    <p>Rodapé da página...</p>
+                                </footer>
+                            </code>
+                            
+                            
+                           
+                    <p><b>2.2. Atributos ARIA: </b>ARIA (Accessible Rich Internet Applications) são atributos adicionados a elementos HTML para melhorar a semântica e acessibilidade de elementos interativos. Eles ajudam a descrever a função e o comportamento dos elementos para tecnologias assistivas.</p>
+                        
+                        <p>Um exemplo de atributo ARIA (Accessible Rich Internet Applications) é aria-label. Ele é usado para definir uma etiqueta personalizada para um elemento que pode ser lida por tecnologias assistivas, como leitores de tela. Aqui está um exemplo de como utilizá-lo:</p>
+                            
+                            <code id="nave">
+                                <button aria-label="Fechar">X</button>
+                            </code>
+
+                            <p>Nesse exemplo, o botão tem um "X" visível como seu conteúdo, mas a tecnologia assistiva vai anunciar "Fechar" para os usuários, proporcionando uma melhor compreensão da função do botão.</p>
+                         
+
+                    
+                    <p><b>2.3. Formulários Acessíveis: </b>HTML5 oferece novos tipos de input como email, tel, date, number, entre outros, que ajudam a validar e facilitar a entrada de dados. Além disso, o uso correto de rótulos (label) associados a campos de formulário (input, textarea, select) é crucial para garantir que usuários saibam claramente qual informação é esperada em cada campo.</p>
+                        <p>EXEMPLO:</p>
+                            <code id="nave">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </code>
+                            
+
+                    <br>               
+                    <br>
+                    <p><b>2.4. Áudio e Vídeo: </b>Elementos audio e video foram introduzidos no HTML5 com suporte embutido para legendas e descrições de áudio/vídeo, permitindo uma experiência mais inclusiva para usuários surdos ou com deficiência auditiva.</p>
+                        <p>EXEMPLO:</p>
+                            <code id="nave">
+                                <video controls>
+                                    <source src="video.mp4" type="video/mp4">
+                                    <track kind="subtitles" label="Legendas em Português" src="legenda.vtt" srclang="pt">
+                                    Seu navegador não suporta o elemento <code>video</code>.
+                                </video>
+                            </code>
+                            
+                    
+                    <br>        
+                    <br>        
+                    <p><b>2.5. SVG e Canvas: </b>Elementos como svg e canvas permitem a criação de gráficos e conteúdos visuais dinâmicos. Garantir que esses elementos sejam acessíveis inclui a utilização de textos alternativos (title e desc) para descrever gráficos complexos e visualizações.</p>
+                    
+                    <p><b>2.6. Contraste e Legibilidade: </b>A HTML5 não possui recursos específicos para controle de contraste, mas é essencial para a acessibilidade que o contraste entre o texto e o fundo seja suficiente para facilitar a leitura, especialmente para usuários com baixa visão.</p>
+                    
+                    <p><b>2.7. Estruturação e Navegação: </b>A estruturação clara da página e o uso correto de títulos (h1 a h6) ajudam na navegação visual e em leitores de tela, proporcionando uma experiência mais consistente e intuitiva para todos os usuários.</p>         
+                
+
+            
+            <br>
+            <h3 id="scraping"><strong>3. Web Scraping</strong></h3>
+                <p>Web scraping é uma técnica usada para extrair dados de websites de forma automatizada. Aqui está uma explicação concisa sobre como funciona e algumas considerações importantes:</p>
+
+                    <p><b>3.1. Objetivo: </b>Coletar dados de websites que não fornecem uma API para acesso direto às informações.</p>
+                    
+                    <p><b>3.2. Ferramentas Comuns:</b></p>
+                        <ul>
+                            <li><b>Bibliotecas: </b>BeautifulSoup, Scrapy, Selenium (Python), Puppeteer (JavaScript).</li>
+                            <li><b>Linguagens: </b>Python é popular devido à sua simplicidade e suporte de bibliotecas, mas outras linguagens como JavaScript também são usadas.</li>
+                        </ul>
+
+                    <p><b>3.3. Funcionamento Básico:</b></p>
+                        <ul>
+                            <li><b>Envio de Solicitação: </b>Enviar uma requisição HTTP ao site usando bibliotecas como requests em Python.</li>
+                            <li><b>Parseamento do HTML: </b>Analisar e extrair dados do HTML retornado usando bibliotecas como BeautifulSoup ou lxml.</li>
+                            <li><b>Extração de Dados: </b>Identificar e extrair os elementos desejados, como textos, links, imagens, tabelas, etc.</li>
+                            <li><b>Armazenamento: </b>Salvar os dados extraídos em formatos como CSV, JSON, ou diretamente em bancos de dados.</li>
+                        </ul>
+
+                    <p><b>3.4. Exemplo de Código em Python:</b></p>
+                        <ul>
+                            <code id="nave">
+                                import requests
+                                <br>
+                                from bs4 import BeautifulSoup
+                                <br>
+                                <br>
+
+                                url = 'http://example.com'
+                                <br>
+                                response = requests.get(url)
+                                <br>
+                                soup = BeautifulSoup(response.content, 'html.parser')
+                                <br>
+                                <br>
+                                
+                                # Exemplo: Extraindo todos os títulos de artigos
+                                <br>
+                                for article in soup.find_all('h2'):
+                                <br>
+                                    print(article.get_text())
+                            </code>
+                        </ul>
+
+                    <p><b>3.5. Considerações Legais e Éticas:</b></p>
+                        <ul>
+                            <li><b>Respeitar os Termos de Uso: </b>Verificar se o site permite web scraping. Muitos sites têm regras específicas em seus termos de serviço.</li>
+                            <li><b>Robots.txt: </b>Verificar o arquivo robots.txt do site para entender quais partes do site são permitidas para scraping.</li>
+                            <li><b>Carga no Servidor: </b>Evitar sobrecarregar os servidores do site com muitas requisições simultâneas.</li>
+                        </ul>
+
+                    <p><b>3.6. Boas Práticas:</b></p>
+                        <ul>
+                            <li><b>Pausas Entre Requisições: </b>Implementar intervalos entre requisições para evitar sobrecarga no servidor.</li>
+                            <li><b>Rotação de IPs e User Agents: </b>Utilizar proxies e alterar o user agent para evitar bloqueios.</li>
+                            <li><b>Tratar Exceções: </b>Implementar tratamento de erros para lidar com respostas inesperadas ou falhas na rede.</li>
+                        </ul>
+                        
+                    <p>Web scraping é uma ferramenta poderosa para coleta de dados, mas deve ser usado de forma responsável e ética.</p>    
+
+
+            <br>
+            <h3 id="mhf"><strong>4. Main, header e footer</strong></h3>  
+                Os elementos main, header e footer são elementos semânticos introduzidos no HTML5 que ajudam a estruturar o conteúdo de uma página web de forma clara e organizada:
+
+                    <p><b>4.1. Main</b></p>
+                        <ul>
+                            <li><b>Descrição: </b>Representa o conteúdo principal de um documento.</li>
+                            <li><b>Uso: </b>Deve conter o conteúdo que é central para a funcionalidade ou propósito principal da página.</li>
+                            <li><b>Restrição: </b>Deve haver apenas um main por página, e não deve conter conteúdo repetitivo que aparece em várias páginas (como cabeçalhos ou rodapés).</li>
+                        </ul>
+                    
+                            <p>Exemplo:</p>
+                                <code id="nave">
+                                    -------------------------------------------
+                                    <main>
+                                        <h1>Bem-vindo ao meu site</h1>
+                                        <p>Este é o conteúdo principal.</p>
+                                    </main>
+                                    -------------------------------------------
+                                </code>
+                            
+
+                    <p><b>4.2. Header</b></p>
+                        <ul>
+                            <li><b>Descrição: </b>Representa um grupo de conteúdo introdutório ou de navegação.</li>
+                            <li><b>Uso: </b>Normalmente inclui logotipos, títulos, menus de navegação e outros elementos de cabeçalho.</li>
+                            <li><b>Flexibilidade: </b>Pode ser usado em diferentes seções de um documento, não apenas no topo da página.</li>
+                        </ul>
+
+                            <p>Exemplo:</p>
+                                <code id="nave">
+                                    ---------------------------
+                                    <header>
+                                        <h1>Minha Empresa</h1>
+                                        <nav>
+                                            <ul>
+                                            <li><a href="#home">Início</a></li>
+                                            <li><a href="#about">Sobre</a></li>
+                                            <li><a href="#contact">Contato</a></li>
+                                            </ul>
+                                        </nav>
+                                    </header>
+                                    ---------------------------
+                                </code>
+
+
+                    <p><b>4.3. Footer</b></p>
+                        <ul>
+                            <li><b>Descrição: </b>Representa o rodapé de uma seção ou documento.</li>
+                            <li><b>Uso: </b>Normalmente inclui informações de contato, direitos autorais, links de política de privacidade e outros elementos de rodapé.</li>
+                            <li><b>Flexibilidade: </b>Pode ser usado em diferentes seções de um documento, não apenas no final da página.</li>
+                        </ul>
+                            <p>Exemplo:</p>
+                                <code id="nave">
+                                    ---------------------------------------------------
+                                    <footer>
+                                        <p>&copy; 2024 Minha Empresa. Todos os direitos reservados.</p>
+                                        <nav>
+                                            <ul>
+                                            <li><a href="#privacy">Política de Privacidade</a></li>
+                                            <li><a href="#terms">Termos de Serviço</a></li>
+                                            </ul>
+                                        </nav>
+                                    </footer>
+                                    ---------------------------------------------------
+                                </code>
+                                <br>
+                                <br>
+                    
+
+                <p>Esses elementos ajudam a tornar o HTML mais legível e a melhorar a acessibilidade, proporcionando uma estrutura lógica e clara tanto para desenvolvedores quanto para tecnologias assistivas.</p>
+            
+
+            <br>
+            <h3 id="asn"><strong>5. Aside, section e nav</strong></h3>
+                <p>Essas tags ajudam a estruturar e organizar o conteúdo de forma semântica, melhorando a usabilidade e a SEO.</p>
+
+                    <p><b>5.1. Aside</b></p>
+                        <ul>
+                            <li><b>Propósito: </b>Utilizado para conteúdo que é tangencialmente relacionado ao conteúdo principal. Geralmente, é usado para informações secundárias ou complementares.</li>
+                            <li><b>Exemplos: </b>Uma barra lateral com links relacionados, uma caixa com informações do autor, ou uma citação.</li>
+                            <li><b>Benefícios: </b>Ajuda a organizar o conteúdo em uma estrutura lógica, melhorando a acessibilidade e a clareza para os leitores e motores de busca.</li>
+                        </ul>
+
+                    <p><b>5.2. Section</b></p>
+                        <ul>
+                            <li><b>Propósito: </b>Define uma seção temática dentro de um documento. Cada section deve ter um título (usualmente uma tag h1 a h6) e agrupar conteúdo relacionado.</li>
+                            <li><b>Exemplos: </b>Uma seção de um artigo com subtítulos específicos, uma parte de uma página de serviço com descrição, características e preços.</li>
+                            <li><b>Benefícios: </b>Facilita a organização e a estruturação do conteúdo, permitindo uma navegação mais clara e uma melhor indexação por motores de busca.</li>
+                        </ul>
+
+                    <p><b>5.3. Nav</b></p>
+                        <ul>
+                            <li><b>Propósito: </b>Define um bloco de navegação contendo links para outras partes do site ou documento. É usado para menus de navegação.</li>
+                            <li><b>Exemplos: </b>Menus de cabeçalho, barras laterais de links, menus de rodapé.</li>
+                            <li><b>Benefícios: </b>Melhora a usabilidade e a acessibilidade, ajudando os usuários a navegar facilmente pelo site e permitindo que motores de busca entendam a estrutura de navegação.</li>
+                        </ul>
+                        
+                    <p><b>Exemplo:</b></p>
+                        <code id="nave">
+                            <header>
+                                <h1>Bem-vindo ao Meu Site</h1>
+                              </header>
+                            
+                              <!-- Navegação Principal -->
+                              <nav role="navigation">
+                                <ul>
+                                  <li><a href="index.html">Página Inicial</a></li>
+                                  <li><a href="sobre.html">Sobre</a></li>
+                                  <li><a href="contato.html">Contato</a></li>
+                                </ul>
+                              </nav>
+                            
+                              <main>
+                                <!-- Seção Principal -->
+                                <section>
+                                  <h2>Artigo Principal</h2>
+                                  <p>Este é o conteúdo principal do site. Aqui você encontrará as informações mais importantes.</p>
+                                </section>
+                            
+                                <!-- Seção Secundária -->
+                                <section>
+                                  <h2>Artigo Secundário</h2>
+                                  <p>Este é um artigo secundário que complementa o conteúdo principal com informações adicionais.</p>
+                                </section>
+                              </main>
+                            
+                              <!-- Conteúdo Secundário ou Complementar -->
+                              <aside>
+                                <h3>Links Relacionados</h3>
+                                <ul>
+                                  <li><a href="artigo1.html">Artigo 1</a></li>
+                                  <li><a href="artigo2.html">Artigo 2</a></li>
+                                  <li><a href="artigo3.html">Artigo 3</a></li>
+                                </ul>
+                              </aside>
+                            
+                              <footer>
+                                <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+                              </footer>
+                        </code>
+
+                    <br>
+                    <p><b>Explicação do Código:</b></p>
+                        <ul>
+                            <li><b>header: </b>Contém o cabeçalho do site com o título principal.</li>
+                            <li><b>nav: </b>Define a seção de navegação principal com links para as páginas do site.</li>
+                            <li><b>role="navigation": </b>Especifica que esta seção é destinada para navegação.</li>
+                            <li><b>main: </b>Contém o conteúdo principal do documento.</li>
+                            <li><b>section>: </b>Define duas seções distintas dentro do conteúdo principal.</li>
+                            <li><b>Primeira section: </b>Contém um artigo principal.</li>
+                            <li><b>Segunda section: </b>Contém um artigo secundário que complementa o principal.</li>
+                            <li><b>aside: </b>Contém conteúdo secundário ou complementar, como links relacionados.</li>
+                            <li><b>footer: </b>Contém o rodapé do site com informações de copyright.</li>
+                        </ul>
+
+                    <p>Esse código organiza o conteúdo de forma clara e semântica, melhorando a estrutura e a acessibilidade da página.</p>
+
+            
+            <br>
+            <h3 id="abq"><strong>6. Article, blockquote e Q</strong></h3>
+                <p>Essas tags ajudam a melhorar a semântica e a estrutura do conteúdo, facilitando a leitura e a interpretação tanto para usuários quanto para motores de busca.</p>
+
+                    <p><b>6.1. Article</b></p>
+                        <ul>
+                            <li><b>Propósito: </b>Define um conteúdo independente e autocontido que pode ser distribuído e reutilizado em diferentes contextos. Normalmente usado para artigos de blog, notícias ou postagens.</li>
+                            <li><b>Exemplos: </b>Uma postagem de blog, um artigo de notícia, uma entrada em um fórum.</li>
+                            <li><b>Benefícios: </b>Ajuda a estruturar o conteúdo de maneira lógica e semanticamente, facilitando a indexação e a reutilização.</li>
+                        </ul>
+
+                    <p><b>6.2. Blockquote</b></p>
+                        <ul>
+                            <li><b>Propósito: </b>Usado para citar longas seções de texto de outras fontes. O conteúdo dentro de blockquote é geralmente formatado com uma margem ou recuo para destacar que é uma citação.</li>
+                            <li><b>Exemplos: </b>Citações de artigos, depoimentos extensos, trechos de livros ou discursos.</li>
+                            <li><b>Benefícios: </b>Melhora a clareza e a organização ao destacar e distinguir citações de outras partes do texto.</li>
+                        </ul>
+
+                    <p><b>6.3. Q</b></p>
+                        <ul>
+                            <li><b>Propósito: </b>Utilizado para citações curtas dentro de uma linha de texto. Normalmente, o navegador adiciona aspas ao redor do conteúdo dentro de q.</li>
+                            <li><b>Exemplos: </b>Citações curtas em um parágrafo, como uma frase de alguém. Exemplo:<q>A corrida era boa.</q></li>
+                            <li><b>Benefícios: </b>Fornece uma maneira semântica de marcar citações curtas, melhorando a estrutura e a legibilidade do texto.</li>
+                        </ul>
+
+                    <br>
+                    <p><b>Exemplo: </b></p>
+                        <code id="nave">
+                            <article class="text-purple">
+                                <h2>A Importância da Leitura</h2>
+                                <p>Publicado em <time update>22/07/2024: 19:00</time></p> <!-- para escrever quando foi publicado -->
+                                <p>Leitura é uma atividade fundamental para o desenvolvimento pessoal e profissional. Ela expande o vocabulário, melhora a escrita e oferece novos conhecimentos.</p>
+                            
+                                <blockquote cite="https://wikipedia.com"> <!-- Utilizando o cite consigo linkar a fonte da citação com o que eu escrevi -->
+                                  <p><q>Um leitor vive mil vidas antes de morrer, disse Jojen. O homem que nunca lê vive apenas uma.</q> - George R.R. Martin</p>
+                                </blockquote>
+                            
+                                <p>A prática regular da leitura pode proporcionar uma melhor compreensão do mundo e das pessoas ao nosso redor. É um hábito que pode ser cultivado em qualquer idade.</p>
+                              </article>
+                        </code>
+
+                    <br>    
+                    <p><b>No exemplo acima:</b></p>
+                        <ul>
+                            <li><b><span class="text-purple">article: </span></b>Define um artigo independente que pode ser reutilizado de forma independente.</li>
+                            <li><b><span class="text-blue">blockquote: </span></b>Usado para citar uma seção de outra fonte.</li>
+                            <li><b><span class="text-green">q: </span></b>Utilizado para citações curtas dentro do texto</li>
+                        </ul>
+                    
+                    
+                    
+            
+            <br>
+            <h3 id="ffp"><strong>7. Figure, figcaption e picture</strong></h3>
+
+                    <p><b>7.1. Figure</b></p>
+                        <ul>
+                            <li><b>Propósito: </b>Usado para agrupar conteúdo ilustrativo, como imagens, gráficos, diagramas ou qualquer outro conteúdo visual, que pode ser referenciado no texto. Como se fosse um conteiner.</li>
+                            <li><b>Exemplos: </b>Agrupar uma imagem com sua legenda, diagramas com descrições, gráficos com explicações.</li>
+                            <li><b>Benefícios: </b>Ajuda a associar o conteúdo visual com sua descrição, melhorando a acessibilidade e a organização do conteúdo.</li>
+                        </ul>
+
+                    <p><b>7.2. Figcaption</b></p>
+                        <ul>
+                            <li><b>Propósito: </b>Fornece uma legenda ou descrição para o conteúdo dentro do figure.</li>
+                            <li><b>Exemplos: </b>Uma breve descrição ou título para uma imagem, explicação para um gráfico ou diagrama.</li>
+                            <li><b>Benefícios: </b>Facilita a compreensão do conteúdo visual para todos os usuários, incluindo aqueles que utilizam leitores de tela.</li>        
+                        </ul>
+
+                    <p><b>7.3. Picture</b></p>
+                        <ul>
+                            <li><b>Propósito: </b>Oferece uma maneira flexível de exibir diferentes versões de uma imagem, dependendo das condições de exibição, como a largura da tela ou a densidade de pixels do dispositivo.</li>
+                            <li><b>Exemplos: </b>Carregar imagens de alta resolução para dispositivos com telas de alta densidade de pixels, ou versões menores para dispositivos móveis.</li>
+                            <li><b>Benefícios: </b>Melhora a performance e a responsividade do site ao carregar imagens apropriadas para diferentes dispositivos e condições.</li>
+                        </ul>
+
+
+                    <p><b>Exemplo de uso conjunto:</b></p>
+                        <code id="nave">
+                            <div id="nave">
+                                <figure>
+                                    <picture>
+                                        <source srcset="alien-grande-resolucao.jpg" media="(min-width: 800px)">
+                                        <source srcset="imagem-media-resolucao.jpg" media="(min-width: 400px)">
+                                        <img src="midia/alien.jpg" alt="Descrição da imagem" width="600" height="400">
+                                    </picture>
+                                    <figcaption>Legenda descrevendo a imagem.</figcaption>
+                                </figure>
+                            </div>
+                        </code>
+
+                    <br>
+                    <p><b>No exemplo acima:</b></p>
+                            <ul>
+                                <li>A tag picture permite carregar diferentes versões da imagem com base na largura da tela.</li>
+                                <li>A tag figcaption fornece uma legenda descritiva para a imagem agrupada dentro da tag figure.</li>
+                            </ul>
+                            
+            
+            <br>
+            <h3 id="seo"><strong>8. O que é SEO</strong></h3>
+                <p>SEO (Search Engine Optimization) é o conjunto de técnicas e práticas voltadas para otimizar um site ou página web, visando melhorar seu posicionamento nos resultados orgânicos dos motores de busca, como Google, Bing e Yahoo.</p>
+
+                <p><b>8.1. Principais Componentes de SEO:</b></p>
+                    <ul>
+                        <li><b>Palavras-chave: </b>Seleção e uso estratégico de termos de busca que os usuários utilizam para encontrar conteúdo relacionado ao seu site.</li>
+                        <li><b>Conteúdo de Qualidade: </b>Criação de conteúdo relevante, útil e bem-estruturado que responda às perguntas e necessidades dos usuários.</li>
+                        <li><b>Otimização On-Page: </b>Melhoria de elementos dentro do site, como tags de título, meta descrições, cabeçalhos, URLs amigáveis, e uso adequado de tags HTML (como h1, h2, etc.).</li>
+                        <li><b>Otimização Off-Page: </b>Práticas externas ao site que influenciam seu ranking, como backlinks de qualidade, presença em redes sociais e marketing de conteúdo.</li>
+                        <li><b>Experiência do Usuário (UX): </b>Garantir que o site seja fácil de navegar, rápido para carregar e responsivo (adaptável a diferentes dispositivos).</li>
+                        <li><b>Técnicas Avançadas: </b>Implementação de práticas como a otimização de velocidade do site, uso de dados estruturados (schema.org), e adaptação para a busca por voz.</li>
+                    </ul>
+                    
+                <p><b>8.2. Benefícios do SEO:</b></p>
+                    <ul>
+                        <li><b>Maior Visibilidade: </b>Melhora a posição nos resultados de busca, aumentando a visibilidade do site.</li>
+                        <li><b>Tráfego Orgânico: </b>Atrai visitantes sem a necessidade de anúncios pagos, baseando-se na relevância e qualidade do conteúdo.</li>
+                        <li><b>Credibilidade e Autoridade: </b>Sites bem posicionados são vistos como mais confiáveis e autoritativos pelos usuários.</li>
+                        <li><b>ROI Sustentável: </b>Investimentos em SEO podem trazer resultados a longo prazo, com um retorno contínuo.</li>
+                    </ul>
+
+                <p>SEO é essencial para qualquer estratégia de marketing digital, ajudando a atrair mais visitantes qualificados e a converter esses visitantes em clientes ou leads.</p>
+                <br>
+                <br>
+                <br>
+    </div>
+
+    <div id="footer">
+        <a href="https://github.com/paulaalessandrars" target="_blank" rel="noopener noreferrer">&copy; 2024 Paula Alessandra. Todos os direitos reservados.</a> <!-- Link para GitHub, abrindo em uma nova aba -->
+    </div>
+</body>
+</html>
