@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML I - Conceitos Básicos</title>
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+    <meta name="description" content="Aprenda os conceitos básicos de HTML, incluindo tags de formulário, tipos de input, e mais.">
+    <meta name="keywords" content="HTML, formulário, input, button, tags, tutorial">
+    <meta name="author" content="Seu Nome">
+</head>
+<body>
+    <header>
+        <h1>Trabalhando com Formulário em HTML</h1>
+    </header>
+
+    <nav id="nav">
+        <ul>
+            <li><a href="#form" target="_self">Tags Form</a></li>
+            <li><a href="#input" target="_self">Tag Input e Seus Tipos</a></li>
+            <li><a href="#button" target="_self">Button e Seus Tipos</a></li>
+            <li><a href="#select" target="_self">Select e Seus tipos</a></li>
+            <li><a href="#textarea" target="_self">Textarea</a></li>
+            <li><a href="../../2 - conceitosBasicos/conceitosBasicos.html"><< Voltar</a></li>
+        </ul>
+    </nav>
+
+    <main id="content">
+        <section id="form">
+            <h2>1. Tags Form</h2>
+            <p>A tag form serve para criar formulários. Você abre a tag e depois informa os campos necessários utilizando o input type, que pode ser de diversos tipos. Nesse caso, foi utilizado o type text, number e password. Por último, foi utilizado um button submit para enviar as informações preenchidas no formulário.</p>
+            <p>É possível nomear o formulário utilizando o atributo name no form para que então você possa utilizar a programação em JavaScript para refinar melhor as informações.</p>
+            <p>Podemos usar o atributo action dentro do form para enviar as informações para o servidor que desejamos.</p>
+            <p>O atributo method é usado em elementos form em HTML para especificar como os dados do formulário devem ser enviados ao servidor. Existem dois valores principais para o atributo method:</p>
+            <ul>
+                <li><strong>GET:</strong> Os dados do formulário são anexados à URL como uma string de consulta. Isso é adequado para formulários que não alteram ou adicionam dados no servidor e que têm um limite de tamanho de URL.</li>
+                <li><strong>POST:</strong> Os dados do formulário são incluídos no corpo da requisição HTTP. Isso é usado para formulários que podem alterar ou adicionar dados no servidor e não têm limitações de tamanho de dados. O mais seguro é sempre utilizar o método post para que não apareçam os dados na URL.</li>
+            </ul>
+            <p>O atributo target no elemento form do HTML é usado para especificar onde abrir a resposta do formulário após o envio. Por exemplo, você pode usar target="_blank" para abrir a resposta em uma nova aba ou _self para abrir na mesma.</p>
+            <p>O atributo autocomplete na tag form do HTML serve para controlar como o navegador preenche automaticamente os campos do formulário.</p>
+            <ul>
+                <li><strong>autocomplete="on":</strong> O navegador pode salvar e preencher automaticamente os dados do usuário em campos específicos, como nome, email e senha. Isso facilita o preenchimento de formulários repetitivos, mas pode representar um risco de segurança se o computador for compartilhado.</li>
+                <li><strong>autocomplete="off":</strong> O navegador não salva ou preenche automaticamente nenhum dado do formulário. O usuário precisa digitar todas as informações manualmente, o que pode ser mais lento, mas é mais seguro.</li>
+                <li><strong>Valores específicos:</strong> Você pode especificar quais tipos de dados o navegador deve ou não preencher automaticamente. Por exemplo, autocomplete="email" permite que o navegador preencha automaticamente apenas campos de email, enquanto autocomplete="off" desativa o autopreenchimento para todos os campos.</li>
+            </ul>
+            <p>O poder do onsubmit em HTML: Domine seus formulários! O atributo onsubmit em HTML te dá a superpotência de executar ações quando um formulário for enviado. Imagine um botão de "Enviar" que, além de enviar o formulário, também valida os dados, exibe uma mensagem de sucesso ou redireciona para outra página. Tudo isso é possível com o onsubmit!</p>
+            <ol>
+                <li>O usuário clica no botão "Enviar".</li>
+                <li>O evento onsubmit é acionado.</li>
+                <li>O código JavaScript que você escreveu é executado.</li>
+                <li>O formulário é enviado (ou não, se você cancelar o envio).</li>
+            </ol>
+            <p>O que você pode fazer com o onsubmit:</p>
+            <ul>
+                <li>Validar dados: Verifique se o usuário preencheu tudo corretamente e se os formatos dos dados estão ok (email, telefone, etc.).</li>
+                <li>Exibir mensagens: Mostre alertas de erro ou sucesso para o usuário.</li>
+                <li>Evitar envios indesejados: Cancele o envio do formulário caso a validação falhe.</li>
+                <li>Executar ações AJAX: Atualize partes da página sem recarregar tudo.</li>
+                <li>Redirecionar para outra página: Leve o usuário para um novo local após o envio.</li>
+            </ul>
+            <h3>Exemplo:</h3>
+            <form name="signup" onsubmit="alert('Formulário enviado!');" autocomplete="on" target="_self" method="post" action="https://meusite.com.br/signup">
+                <fieldset>
+                    <legend>Formulário de Cadastro:</legend>
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name">
+                    <label for="age">Idade:</label>
+                    <input type="number" id="age" name="age">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password">
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="input">
+            <h2>2. Tag Input e Seus Tipos</h2>
+            <p>O elemento input é a chave para criar campos de formulário interativos em HTML. Com ele, você dá vida a diversos tipos de inputs, como caixas de texto, botões, menus suspensos e muito mais!</p>
+            <h3>2.1. Tipos de Input:</h3>
+            <ul>
+                <li><strong>Text:</strong> O input type="text" é uma caixa de texto genérica em HTML. O ideal é sempre utilizar o label para indicação antes da caixa.
+                    <br>
+                    <br>
+                    <label for="name">Digite seu nome aqui:</label>
+                    <input type="text" id="name">
+                </li>
+                <li><strong>Number:</strong> Caixa de número genérica. Posso definir o número mínimo e máximo para esse campo utilizando o min e o max após o number; nesse caso eu defini o número mínimo como 20 e o máximo como 120. Também consigo definir se quero que ele conte de 5 em 5, 10 em 10 e assim por diante usando o step; nesse caso ele conta de 10 em 10.
+                    <br>
+                    <br>
+                    <label for="age">Digite sua idade aqui:</label>
+                    <input type="number" id="age" min="20" max="120" step="10">
+                </li>
+                <li><strong>Button:</strong> O input type="button" é um botão em HTML. O value define o que estará escrito dentro da caixa botão. Semanticamente é melhor utilizar o button para botão e não o type button, pois consigo visualizar melhor que é um botão.
+                    <br>
+                    <br>
+                    <label for="send">Clique aqui para enviar:</label>
+                    <input type="button" id="send" value="Enviar">
+                    <br>
+                    <br>
+                    <label for="sendButton">Clique aqui para enviar:</label>
+                    <button id="sendButton" type="button">Enviar</button>
+                </li>
+                <li><strong>Range:</strong> O input type="range" em HTML te dá o poder de criar sliders interativos em seus sites e aplicações! Imagine um controle deslizante para ajustar o volume, escolher uma cor ou definir o nível de zoom. Com o input type="range", tudo isso é possível e muito mais! Também é possível configurar um mínimo, máximo e o valor inicial utilizando o min, max e value respectivamente.
+                    <br>
+                    <br>
+                    <label for="volume">Volume:</label>
+                    <input type="range" id="volume" min="0" max="200" value="10">
+                </li>
+                <li><strong>Color:</strong> No HTML, o input do tipo color permite ao usuário selecionar uma cor. Esse elemento gera um seletor de cores que, ao ser clicado, abre uma interface gráfica onde é possível escolher uma cor específica. O valor da cor selecionada é retornado no formato hexadecimal (#RRGGBB), sendo útil para personalização de interfaces, como escolher a cor de fundo, texto ou elementos gráficos em uma página web. Para criar um campo de input de cor em HTML, basta usar a tag <code>&lt;input type="color"&gt;</code>.
+                    <br>
+                    <br>
+                    <label for="color">Escolha sua cor favorita:</label>
+                    <input type="color" id="color">
+                </li>
+                <li><strong>Email:</strong> O input type="email" no HTML é um campo de entrada que permite aos usuários inserirem endereços de email. Ele valida automaticamente se o formato do email está correto, garantindo que o usuário forneça um endereço válido. Além disso, em dispositivos móveis, o teclado é adaptado para facilitar a digitação de emails. Isso melhora a experiência do usuário e a precisão dos dados inseridos. Para usar, basta adicionar a tag <code>&lt;input type="email"&gt;</code>.
+                    <br>
+                    <br>
+                    <label for="email">Digite seu email:</label>
+                    <input type="email" id="email">
+                </li>
+                <li><strong>Date:</strong> O input type="date" em HTML permite aos usuários selecionarem uma data através de um calendário embutido. Essa funcionalidade garante a padronização do formato de data e facilita a entrada de informações precisas. Para usar, basta adicionar a tag <code>&lt;input type="date"&gt;</code> no código HTML.
+                    <br>
+                    <br>
+                    <label for="date">Escolha sua data:</label>
+                    <input type="date" id="date">
+                </li>
+                <li><strong>Datetime-local:</strong> O input type="datetime-local" no HTML permite que os usuários selecionem uma data e hora local através de uma interface amigável. Isso é ideal para agendamentos e eventos com horários específicos, garantindo precisão e facilidade de uso. Para implementar, basta usar a tag <code>&lt;input type="datetime-local"&gt;</code> no código HTML.
+                    <br>
+                    <br>
+                    <label for="datetime-local">Escolha data e hora:</label>
+                    <input type="datetime-local" id="datetime-local">
+                </li>
+                <li><strong>Search:</strong> O input type="search" no HTML é um campo de entrada otimizado para pesquisas. Ele melhora a experiência do usuário ao oferecer funcionalidades específicas, como a possibilidade de limpar o campo com um botão embutido. Em dispositivos móveis, o teclado é adaptado para facilitar a digitação de termos de busca. Para usar, basta adicionar a tag <code>&lt;input type="search"&gt;</code> no código HTML.
+                    <br>
+                    <br>
+                    <label for="search">Digite sua busca:</label>
+                    <input type="search" id="search">
+                </li>
+                <li><strong>Tel:</strong> O input type="tel" no HTML é um campo de entrada projetado para números de telefone. Ele otimiza a experiência do usuário ao adaptar o teclado para a digitação de números em dispositivos móveis, facilitando a inserção de informações precisas. Esse tipo de input não valida automaticamente o formato do número, mas garante uma interface adequada para o propósito. Para usar, basta adicionar a tag <code>&lt;input type="tel"&gt;</code> no código HTML.
+                    <br>
+                    <br>
+                    <label for="tel">Digite seu telefone:</label>
+                    <input type="tel" id="tel">
+                </li>
+                <li><strong>Time:</strong> O input type="time" no HTML permite aos usuários selecionarem horários específicos com precisão, através de uma interface amigável. Ideal para agendamentos e eventos, esse campo facilita a entrada de informações de tempo, garantindo padronização e facilidade de uso. Para implementar, basta usar a tag <code>&lt;input type="time"&gt;</code> no código HTML.
+                    <br>
+                    <br>
+                    <label for="time">Escolha um horário:</label>
+                    <input type="time" id="time">
+                </li>
+                <li><strong>Url:</strong> O input type="url" no HTML é um campo de entrada projetado para URLs (endereços de sites). Ele valida automaticamente se o formato do URL está correto, garantindo que os usuários forneçam endereços válidos. Além disso, em dispositivos móveis, o teclado é adaptado para facilitar a digitação de URLs. Para usar, basta adicionar a tag <code>&lt;input type="url"&gt;</code> no código HTML.
+                    <br>
+                    <br>
+                    <label for="url">Digite uma URL:</label>
+                    <input type="url" id="url">
+                </li>
+                <li><strong>Week:</strong> O input type="week" no HTML permite que os usuários selecionem uma semana específica de um ano através de uma interface amigável. Essa funcionalidade é útil para aplicativos que precisam de informações precisas sobre semanas, como planejadores e agendas. Para usar, basta adicionar a tag <code>&lt;input type="week"&gt;</code> no código HTML.
+                    <br>
+                    <br>
+                    <label for="week">Escolha uma semana:</label>
+                    <input type="week" id="week">
+                </li>
+                <li><strong>Checkbox:</strong> O input type="checkbox" no HTML é uma caixa de seleção que permite aos usuários escolherem múltiplas opções em um formulário. Ideal para preferências e configurações, esse tipo de input oferece flexibilidade e interatividade. Para usar, basta adicionar a tag <code>&lt;input type="checkbox"&gt;</code> no código HTML.
+                    <br>
+                    <br>
+                    <label for="checkbox1">Opção 1:</label>
+                    <input type="checkbox" id="checkbox1" name="option1" value="1">
+                    <br>
+                    <br>
+                    <label for="checkbox2">Opção 2:</label>
+                    <input type="checkbox" id="checkbox2" name="option2" value="2">
+                </li>
+                <li><strong>Radio:</strong> O input type="radio" no HTML permite aos usuários selecionar uma única opção dentro de um conjunto de escolhas. É ideal para perguntas de múltipla escolha onde apenas uma resposta é permitida. Para usar, basta adicionar a tag <code>&lt;input type="radio"&gt;</code> no código HTML.
+                    <br>
+                    <br>
+                    <label for="radio1">Opção A:</label>
+                    <input type="radio" id="radio1" name="option" value="A">
+                    <br>
+                    <br>
+                    <label for="radio2">Opção B:</label>
+                    <input type="radio" id="radio2" name="option" value="B">
+                </li>
+            </ul>
+        </section>
+
+        <section id="button">
+            <h2>3. Button e Seus Tipos</h2>
+            <p>A tag button é usada para criar botões em HTML. Eles podem ser personalizados e utilizados de diversas formas.</p>
+            <ul>
+                <li><strong>Button:</strong> Cria um botão simples. Pode ser utilizado com ou sem a tag <code>&lt;button&gt;</code>.
+                    <br>
+                    <br>
+                    <button type="button">Clique Aqui</button>
+                </li>
+                <li><strong>Submit:</strong> Cria um botão que envia um formulário.
+                    <br>
+                    <br>
+                    <button type="submit">Enviar</button>
+                </li>
+                <li><strong>Reset:</strong> Cria um botão que reseta um formulário.
+                    <br>
+                    <br>
+                    <button type="reset">Resetar</button>
+                </li>
+            </ul>
+        </section>
+
+        <section id="select">
+            <h2>4. Select e Seus Tipos</h2>
+            <p>A tag select é usada para criar menus suspensos em HTML. Dentro dela, utilizamos a tag option para definir as opções.</p>
+            <label for="fruits">Escolha uma fruta:</label>
+            <select id="fruits" name="fruits">
+                <option value="apple">Maçã</option>
+                <option value="banana">Banana</option>
+                <option value="cherry">Cereja</option>
+            </select>
+        </section>
+
+        <section id="textarea">
+            <h2>5. Textarea</h2>
+            <p>A tag textarea é utilizada para criar campos de texto maiores, onde os usuários podem inserir múltiplas linhas de texto.</p>
+            <label for="message">Digite sua mensagem:</label>
+            <br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        </section>
+        
+    </main>
+
+    <footer id="footer">
+        <a href="https://github.com/paulaalessandrars" target="_blank">
+            <p><a href="https://github.com/paulaalessandrars" target="_blank" rel="noopener noreferrer">&copy; 2024 Paula Alessandra. Todos os direitos reservados.</a></a>
+    </footer>
+</body>
+
+</html>
