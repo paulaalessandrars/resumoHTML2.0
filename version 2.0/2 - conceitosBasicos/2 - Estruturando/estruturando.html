@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML I - Conceitos Básicos</title>
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+</head>
+<body>
+
+    <header id="header">
+        <h1>Estruturando seu HTML + Formatações</h1>
+    </header>
+
+    <nav id="menu">
+        <ul>
+            <li><a href="#divspan">Div e Span</a></li>
+            <li><a href="#field">Fieldset</a></li>
+            <li><a href="#beds">Embeds</a></li>
+            <li><a href="#cor">Cores</a></li>
+            <li><a href="#referencias">Referências</a></li>
+            <li><a href="../../2 - conceitosBasicos/conceitosBasicos.html">&lt;&lt; Voltar</a></li>
+        </ul>
+    </nav>
+
+    <main id="content">
+        <section>
+            <h2 id="divspan">1. Div e Span</h2>
+            <p>As tags <code>&lt;div&gt;</code> e <code>&lt;span&gt;</code> são elementos fundamentais do HTML utilizados para organizar e estilizar o conteúdo de uma página web.</p>
+            <p>A tag <code>&lt;div&gt;</code> é um elemento de bloco usado para criar divisões ou seções distintas em uma página. Ela não possui significado semântico próprio, sendo usada principalmente para agrupar e formatar outros elementos, como texto, imagens, formulários, etc. É muito utilizada para aplicar estilos CSS ou para facilitar a manipulação do conteúdo por meio de scripts.</p>
+            <p>Por outro lado, a tag <code>&lt;span&gt;</code> é um elemento de linha que também não possui significado semântico. Ela é usada para aplicar estilos a partes específicas de um texto ou conteúdo, sem que isso afete a estrutura do documento. Geralmente, o <code>&lt;span&gt;</code> é utilizado quando é necessário aplicar um estilo ou manipular um pequeno trecho de texto dentro de um parágrafo, por exemplo.</p>
+            <p>Em resumo, <code>&lt;div&gt;</code> é usado para dividir e organizar o conteúdo em blocos maiores, enquanto <code>&lt;span&gt;</code> é usado para estilizar ou manipular partes menores do conteúdo, como palavras ou frases. Ambas as tags são fundamentais para a estruturação e estilização de páginas web modernas.</p>
+
+            <h3>Exemplo de div:</h3>
+            <div class="container">
+                <h1>Título da Página</h1>
+                <p>Este é um exemplo de uso da tag <code>&lt;div&gt;</code> para criar uma divisão na página.</p>
+                <div class="apache">
+                    <h2>Exemplo de div dentro de uma div</h2>
+                </div>
+            </div>
+
+            <h3>Exemplo de span:</h3>
+            <p>Este é um <span class="destacado">texto destacado</span> utilizando a tag <code>&lt;span&gt;</code>.</p>      
+
+            <h2 id="field">2. Fieldset</h2>
+            <p>A tag <code>&lt;fieldset&gt;</code> no HTML é usada para agrupar partes de um formulário, ajudando a organizar os campos e tornar o formulário mais fácil de entender.</p>
+            <strong>Estrutura Básica:</strong>
+            <p>Imagine que você está criando um formulário de contato. Você pode usar a tag <code>&lt;fieldset&gt;</code> para agrupar campos relacionados, como informações pessoais e detalhes da mensagem.</p>
+
+            <form>
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Mensagem</legend>
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" name="assunto" required>
+                    <br><br>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+                </fieldset>
+                <br>
+                <input type="submit" value="Enviar">
+            </form>
+
+            <hr>
+            <h3>Explicação:</h3>
+            <p><strong>Form: </strong>Cria um formulário.</p>
+            <p><strong>Fieldset: </strong>Agrupa campos relacionados dentro do formulário.</p>
+            <p><strong>Legend: </strong>Dá um título ao grupo de campos.</p>
+
+            <h3>Benefícios:</h3>
+            <p><strong>Organização: </strong>Mantém os campos do formulário organizados.</p>
+            <p><strong>Facilidade de uso: </strong>Facilita a leitura e o preenchimento do formulário.</p>
+            <p><strong>Estilo: </strong>Você pode usar CSS para estilizar os grupos de campos.</p>
+
+            <h2 id="beds">3. Embeds</h2>
+            <p>No HTML, "embeds" referem-se a tags que permitem incorporar conteúdo de diferentes fontes ou formatos dentro de uma página web. Aqui estão algumas das principais tags de "embeds" e suas funções:</p>
+
+            <ul>
+                <li>
+                    <strong>Iframe: </strong>A tag <code>&lt;iframe&gt;</code> é usada para incorporar outra página HTML dentro de uma página HTML. Posso incorporar inclusive um mapa do Google Maps e vídeos do YouTube.
+                    <p><b>Exemplo:</b></p>
+                    <iframe src="https://www.dio.me" width="600" height="400" title="Site DIO"></iframe>
+                    <p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3522.0473448502207!2d-48.61868810459672!3d-28.023028737368463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9526d14b0432914d%3A0xa2aabb9e6a1d3a2f!2sCentro%20Hist%C3%B3rico%20de%20Garopaba!5e0!3m2!1spt-BR!2sbr!4v1719237860798!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa do Centro Histórico de Garopaba"></iframe>
+                    </p>
+                    <p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/TTdBiwgVkME?si=KLiZWAXq6t1rDylS" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                    </p>
+                </li>
+                <li>
+                    <strong>Embed: </strong>A tag <code>&lt;embed&gt;</code> é usada para incorporar conteúdo de diferentes tipos, como PDFs, vídeos e áudio.
+                    <p><b>Exemplos:</b></p>
+                    <strong>PDF:</strong>
+                    <p><embed src="assets/pdfs/alessandra.pdf" type="application/pdf" width="600" height="400"></p>
+                    <strong>VÍDEO:</strong>
+                    <p><embed src="assets/video/movie.mp4" type="video/mp4" width="600" height="400"></p>
+                    <strong>ÁUDIO:</strong>
+                    <p><embed src="assets/audio/audio.mp3" type="audio/mp3" width="300" height="300"></p>
+
+                    <p><b>Explicação:</b></p>
+                    <b>Src: </b>Define a URL do arquivo a ser incorporado.
+                    <p><b>Type: </b>Define o tipo de conteúdo a ser incorporado</p>
+                    <b>Width e height: </b>Define a largura e altura do conteúdo incorporado.
+
+                </li>
+                <li>
+                    <strong>Object: </strong>A tag <code>&lt;object&gt;</code> é usada para incorporar diferentes tipos de conteúdo, como imagens, vídeos, PDFs, ou mesmo outra página HTML.
+                    <p><b>Exemplos:</b></p>
+                    <strong>IMAGEM:</strong>
+                    <p>
+                        <object data="assets/images/campo.jpeg" type="image/jpeg" width="600" height="400">
+                            <p>Seu navegador não suporta exibição de imagens. <a href="assets/images/campo.jpeg">Baixe a imagem</a>.</p>
+                        </object>
+                    </p>
+                    <strong>VÍDEO:</strong>
+                    <p>
+                        <object data="assets/video/movie.mp4" type="video/mp4" width="600" height="400">
+                            <p>Seu navegador não suporta este tipo de vídeo. <a href="assets/video/movie.mp4">Baixe o vídeo</a>.</p>
+                        </object>
+                    </p>
+                    <strong>PDF:</strong>
+                    <p>
+                        <object data="assets/pdfs/alessandra.pdf" type="application/pdf" width="600" height="400">
+                            <p>Seu navegador não suporta este tipo de vídeo. <a href="assets/pdfs/alessandra.pdf">Baixe o vídeo</a>.</p>
+                        </object>
+                    </p>
+                    <strong>Página HTML:</strong>
+                    <p>
+                        <object data="https://www.example.com" type="text/html" width="600" height="400">
+                            <p>Seu navegador não suporta este tipo de vídeo. <a href="https://www.google.com.br">Baixe o vídeo</a>.</p>
+                        </object>
+                    </p>
+                    <b>Explicação:</b>
+                    <p><b>data: </b>Define a URL do arquivo a ser incorporado.</p>
+                    <b>type: </b>Define o tipo de conteúdo a ser incorporado.
+                    <p><b>width e height: </b>Define a largura e altura do conteúdo incorporado.</p>
+                </li>
+                <li>
+                    <strong>Vídeo: </strong>A tag <code>&lt;video&gt;</code> é usada para incorporar vídeos diretamente na página HTML.
+                    <p><b>Exemplo:</b></p>
+                    <p>
+                        <video width="600" height="400" controls autoplay>
+                            <source src="assets/video/movie.mp4" type="video/mp4">
+                            Seu navegador não suporta a tag de vídeo.
+                        </video>
+                    </p>
+                    <b>Explicação:</b>
+                    <p><b>Controls: </b>Adiciona controles de reprodução ao vídeo</p>
+                    <b>Source: </b>Define a URL do arquivo de vídeo e o tipo de vídeo.
+                </li>    
+                <li>
+                    <strong>Áudio: </strong>A tag <code>&lt;audio&gt;</code> é usada para incorporar áudio diretamente na página HTML.
+                    <p><b>Exemplo:</b></p>
+                    <p>
+                        <audio controls>
+                            <source src="assets/audio/audio.mp3" type="audio/mp3">
+                            Seu navegador não suporta a tag de áudio.
+                        </audio>
+                    </p>
+                    <b>Explicação:</b>
+                    <p><b>Controls: </b>Adiciona controles de reprodução ao áudio</p>
+                    <b>Source: </b>Define a URL do arquivo de áudio e o tipo de áudio.
+                </li> 
+            </ul>
+
+            <h2 id="cor">4. Cores</h2>
+            <p>Cores no HTML são definidas usando CSS (Cascading Style Sheets) e podem ser especificadas de várias maneiras diferentes, incluindo nomes de cores, valores hexadecimais, RGB, RGBA, HSL e HSLA. Aqui estão algumas maneiras comuns de definir cores no HTML com exemplos:</p>
+            <ol>
+                <li><strong>Contraste:</strong> Assegure-se de que há um bom contraste entre o texto e o fundo.</li>
+                <li><strong>Consistência:</strong> Use uma paleta de cores consistente em todo o site.</li>
+                <li><strong>Acessibilidade:</strong> Considere o uso de ferramentas de verificação de contraste para garantir que seu site é acessível a todos.</li>
+            </ol>
+            <p><b>Exemplos:</b></p>
+            <ul>
+                <li>
+                    <p><b>Nome das Cores: </b>O CSS suporta uma lista de nomes de cores predefinidos que podem ser usados diretamente. Alguns exemplos incluem red, blue, green, black, white, entre outros.</p>
+    
+                    <style>
+                        .nome-cor {
+                        background-color: red; /* Nome de cor */
+                        color: white;
+                        padding: 10px;
+                        text-align: center;
+                        }
+                    </style>
+                    
+                    <div class="nome-cor">Esta é uma cor chamada "red".</div>       
+            
+            
+                    
+                </li>
+                <br>
+    
+    
+                <li>
+                    <p><b>Valores Hexadecimais: </b>Cores também podem ser especificadas usando valores hexadecimais. Um valor hexadecimal começa com # seguido por seis dígitos/letras, representando os valores de vermelho, verde e azul (RGB).</p>
+    
+                    <style>
+                        .cor-hex {
+                        background-color: #ff6347; /* Hexadecimal para tomatinho */
+                        color: white;
+                        padding: 10px;
+                        text-align: center;
+                        }
+                    </style>
+    
+                    <div class="cor-hex">Esta é uma cor hexadecimal (#ff6347).</div>
+                </li>
+                <br>
+    
+    
+    
+                <li>
+                    <p><b>Valores RGB: </b>As cores podem ser definidas usando o modelo RGB (Red, Green, Blue). Os valores variam de 0 a 255.</p>
+    
+                    <style>
+                        .cor-rgb {
+                        background-color: rgb(60, 179, 113); /* RGB para verde-marinho */
+                        color: white;
+                        padding: 10px;
+                        text-align: center;
+                        }
+                    </style>
+    
+                    <div class="cor-rgb">Esta é uma cor RGB (60, 179, 113).</div>       
+    
+                </li>
+                <br>
+    
+    
+                <li>
+                    <p><b>Valores RGBA: </b>RGBA é como RGB, mas com um canal alfa adicional que define a opacidade. O valor alfa varia de 0 (totalmente transparente) a 1 (totalmente opaco).</p>
+    
+                    <style>
+                        .cor-rgba {
+                          background-color: rgba(255, 99, 71, 0.5); /* RGBA para tomatinho com 50% de opacidade */
+                          color: white;
+                          padding: 10px;
+                          text-align: center;
+                        }
+                    </style>
+    
+                    <div class="cor-rgba">Esta é uma cor RGBA (255, 99, 71, 0.5).</div>      
+    
+                </li>
+                <br>
+    
+    
+                <li>
+                    <p><b>Valores HSL: </b>HSL (Hue, Saturation, Lightness) é uma maneira alternativa de definir cores. O matiz (hue) é um valor de 0 a 360 representando um ângulo no círculo de cores, a saturação e a luminosidade são porcentagens.</p>
+    
+                    <style>
+                        .cor-hsl {
+                          background-color: hsl(120, 60%, 70%); /* HSL para verde claro */
+                          color: white;
+                          padding: 10px;
+                          text-align: center;
+                        }
+                    </style>
+    
+                    <div class="cor-hsl">Esta é uma cor HSL (120, 60%, 70%).</div>      
+    
+                </li>
+                <br>
+    
+    
+                <li>
+                    <p><b>Valores HSLA: </b>HSLA é como HSL, mas com um canal alfa adicional para definir a opacidade.</p>
+    
+                    <style>
+                        .cor-hsla {
+                          background-color: hsla(120, 60%, 70%, 0.5); /* HSLA para verde claro com 50% de opacidade */
+                          color: white;
+                          padding: 10px;
+                          text-align: center;
+                        }
+                    </style>
+    
+                    <div class="cor-hsla">Esta é uma cor HSLA (120, 60%, 70%, 0.5).</div>         
+    
+                </li>
+              </ul>
+              <br>
+    
+    
+              <style>
+                .site {
+                    background-color: rgb(32, 211, 151);
+                    color: #362c2c;
+                    padding: 20px;
+                    text-align: center;
+                }
+              </style>
+    
+    
+              <div class="site"><p><a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">Aqui no w3 schools você pode saber mais sobre os tipos de cores.</a></p></div>
+    
+
+            <h2 id="referencias">Referências</h2>
+            <p>Referências para aprofundar o conhecimento:</p>
+            <ul>
+                <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <p>&copy; 2024 <a href="https://github.com/paulaalessandrars" target="_blank" rel="noopener noreferrer">Paula Alessandra</a>. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
