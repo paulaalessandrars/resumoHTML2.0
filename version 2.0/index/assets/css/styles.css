@@ -1,0 +1,119 @@
+/* Estilização geral */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão para Arial ou sans-serif */
+    margin: 0; /* Remove a margem padrão do body */
+    padding: 0; /* Remove o padding padrão do body */
+    background-color: rgb(255, 207, 170); /* Define a cor de fundo do body */
+}
+
+/* Estilização do cabeçalho */
+header {
+    width: 100%; /* Define a largura do cabeçalho como 100% */
+    background-color: #dd6f16; /* Define a cor de fundo do cabeçalho */
+    text-align: center; /* Centraliza o texto no cabeçalho */
+    padding: 20px 0; /* Adiciona padding superior e inferior de 20px */
+}
+
+header h1 {
+    color: rgb(243, 243, 242); /* Define a cor do texto do h1 */
+    margin: 0; /* Remove a margem do h1 */
+}
+
+/* Estilização da navegação */
+nav {
+    background-color: #f58529; /* Define a cor de fundo da navegação */
+    padding: 15px; /* Adiciona padding interno de 15px */
+    text-align: center; /* Centraliza o texto */
+}
+
+nav ul {
+    list-style: none; /* Remove os marcadores padrão */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove a margem padrão */
+}
+
+nav ul li {
+    display: inline; /* Exibe os itens de navegação em linha */
+    margin: 0 10px; /* Adiciona margem entre os itens */
+}
+
+nav ul li a {
+    color: white; /* Define a cor do texto dos links como branco */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    padding: 10px; /* Adiciona padding interno */
+    font-weight: bold; /* Define o texto dos links como negrito */
+}
+
+nav ul li a:hover {
+    background-color: #333; /* Muda a cor de fundo ao passar o mouse */
+    color: white; /* Mantém a cor do texto como branco */
+    border-radius: 5px; /* Adiciona bordas arredondadas ao fundo */
+}
+
+/* Estilização do conteúdo */
+main {
+    display: flex; /* Usa flexbox para o layout do conteúdo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px; /* Adiciona padding interno de 20px */
+}
+
+section {
+    max-width: 800px; /* Define a largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+}
+
+section img {
+    max-width: 100%; /* Ajusta a largura da imagem para não exceder o tamanho do container */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove o espaço abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+/* Estilização do rodapé */
+footer {
+    background-color: #dd6f16; /* Define a cor de fundo do rodapé */
+    color: rgb(245, 233, 233); /* Define a cor do texto do rodapé como branco */
+    padding: 1px 0; /* Adiciona padding superior e inferior de 10px */
+    width: 100%; /* Define a largura do rodapé como 100% */
+    position: absolute; /* Define o rodapé como absoluto */
+    bottom: 0; /* Fixa o rodapé na parte inferior da tela */
+    text-align: center; /* Centraliza o texto no rodapé */
+    flex-shrink: 0; /* Impede que o rodapé encolha */
+}
+
+footer a {
+    color: white; /* Define a cor dos links como branco */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estilização de listas */
+ul {
+    list-style-type: disc; /* Define o tipo de marcador padrão para listas não ordenadas */
+    padding-left: 20px; /* Adiciona padding à esquerda nas listas não ordenadas */
+}
+
+ol {
+    list-style-type: decimal; /* Define o tipo de marcador padrão para listas ordenadas */
+    padding-left: 20px; /* Adiciona padding à esquerda nas listas ordenadas */
+}
+
+li {
+    padding: 5px 0; /* Adiciona padding superior e inferior nos itens da lista */
+}
+
+h3, h4 {
+    margin: 0; /* Remove a margem dos títulos */
+}
+
+a {
+    color: inherit; /* Herda a cor do texto do elemento pai */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}

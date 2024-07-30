@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos</title>
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Introdução ao HTML</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#tags">Tags</a></li>
+            <li><a href="#atributos">Atributos das Tags</a></li>
+            <li><a href="#textos">Tipografia</a></li>
+            <li><a href="#listas">Listas Ordenadas e Não Ordenadas</a></li>
+            <li><a href="#links">Links</a></li>
+            <li><a href="desafioModuloI/_SITE/index.html">Criando uma página Web</a></li>
+            <li><a href="../index/index.html"><< Voltar</a></li>
+        </ul>
+    </nav>
+
+    <main id="content">
+        <section id="tags">
+            <h2>1. Tags:</h2>
+            <article>
+                <h3>1.1. A tag "i"</h3>
+                <p>A tag <code>i</code> no HTML é usada para indicar que o texto contido dentro dela é um texto com ênfase ou destaque em relação ao texto em torno dele. Anteriormente, essa tag era comumente usada para itálico, mas com a evolução dos padrões web, seu uso para itálico foi substituído pela tag <code>em</code>.</p>
+                <p>Portanto, atualmente, a tag <code>i</code> é mais frequentemente usada para fins semânticos, como destacar um termo técnico, uma palavra em um idioma estrangeiro ou uma frase de um texto, sem implicar que o texto deve ser exibido em itálico. O estilo visual, incluindo a itálico, deve ser aplicado usando CSS.</p>
+                <p>Aqui está um exemplo simples para ilustrar a diferença entre <code>i</code> e <code>em</code>:</p>
+                <p>Isso é um texto com <i>ênfase</i>.</p>
+                <p>Isso é um texto com <em>ênfase</em>.</p>
+                <p>Neste exemplo, ambos os <code>i</code> e <code>em</code> podem ser exibidos como itálico por padrão no navegador, mas semanticamente eles têm significados diferentes. O <code>i</code> é mais genérico e pode ser usado para texto com destaque visual, enquanto o <code>em</code> é usado para ênfase semântica, indicando que a palavra é enfatizada no contexto da frase.</p>
+            </article>
+            <article>
+                <h3>1.2. A tag strong e a tag b</h3>
+                <p>A tag <code>b</code> é usada para estilizar texto de forma que ele apareça em negrito, mas não adiciona significado semântico. A tag <code>strong</code>, por outro lado, é usada para dar ênfase forte ao texto, indicando que o conteúdo é de maior importância.</p>
+                <p>Aqui está um exemplo para ilustrar a diferença:</p>
+                <p>Esse é um texto em <b>negrito</b> sem significado semântico.</p>
+                <p>Esse é um texto com <strong>ênfase forte</strong>, indicando maior importância.</p>
+            </article>
+            <article>
+                <h3>1.3. A tag u</h3>
+                <p>A tag <code>u</code> é usada para marcar texto que tenha um estilo diferente por razões semânticas específicas, como para indicar o nome de uma obra.</p>
+                <p>Para sublinhar texto com CSS, você pode usar a propriedade <code>text-decoration</code>.</p>
+                <p class="sublinhado">Este texto está sublinhado.</p>
+                <style>
+                    .sublinhado {
+                        text-decoration: underline;
+                    }
+                </style>
+            </article>
+            <article>
+                <h3>1.4. A tag br</h3>
+                <p>A tag <code>br</code> é utilizada para inserir uma quebra de linha no texto. É importante usar essa tag de forma apropriada e evitar abusos. Em muitos casos, usar CSS para controlar o layout e espaçamento do texto pode ser uma abordagem mais semântica.</p>
+                <p class="endereco">
+                    Nome: João da Silva<br>
+                    Endereço: Rua das Flores, 123<br>
+                    Cidade: São Paulo<br>
+                    CEP: 01234-567
+                </p>
+                <style>
+                    .endereco {
+                        line-height: 1.5;
+                    }
+                </style>
+            </article>
+            <article>
+                <h3>1.5. input</h3>
+                <p>O <code>input</code> abre uma caixa para inserção de algum dado, usado em formulários, por exemplo.</p>
+                <p>Exemplo:</p>
+                <p><input type="text" aria-label="Campo de texto"/></p>
+            </article>
+            <article>
+                <h3>1.6. img</h3>
+                <p>Adiciona imagens e não tem fechamento, pois é um campo.</p>
+                <p>Exemplo:</p>
+                <p><img width="300" src="assets/images/image.webp" alt="Descrição da imagem"></p>
+            </article>
+            <article>
+                <h3>1.7. Font</h3>
+                <p>A tag <code>font</code> no HTML é obsoleta. É recomendado o uso de CSS para estilização.</p>
+                <p>Exemplo (não recomendado):</p>
+                <p><font face="'Trebuchet MS', Arial, Tahoma, Times New Roman, Harry P" color="red">Este é um texto vermelho.</font></p>
+            </article>
+            <article>
+                <h3>1.8. A tag "del"</h3>
+                <p>A tag <code>del</code> indica texto deletado, exibido com uma linha atravessada.</p>
+                <p><code><del>Exemplo de Uso da Tag</del></code></p>
+            </article>
+            <article>
+                <h3>1.9. A tag abbr</h3>
+                <p>A tag <code>abbr</code> é usada para marcar abreviações, fornecendo uma explicação ao passar o mouse.</p>
+                <p>O <abbr title="Hypertext Markup Language">HTML</abbr> é a linguagem padrão para criação de páginas web.</p>
+            </article>
+            <article>
+                <h3>1.10. mark</h3>
+                <p>A tag <code>mark</code> destaca texto, exibido com um fundo amarelo.</p>
+                <p>Este é um <mark>exemplo</mark> de texto destacado.</p>
+            </article>
+            <article>
+                <h3>1.11. Sup e Sub</h3>
+                <p>Exemplo de <code>sup</code>:</p>
+                <p>2<sup>2</sup></p>
+                <p>Exemplo de <code>sub</code>:</p>
+                <p>2<sub>2</sub></p>
+            </article>
+        </section>
+
+        <section id="atributos">
+            <h2>2. Atributos:</h2>
+            <article>
+                <h3>2.1. id</h3>
+                <p>O <code>id</code> é um identificador para uso com JavaScript.</p>
+                <strong id="titulo">[Aqui tem id]</strong>
+            </article>
+            <article>
+                <h3>2.2. style</h3>
+                <p>O <code>style</code> é um atributo utilizado principalmente no CSS.</p>
+                <strong style="color: blueviolet;">[Aqui tem style]</strong>
+            </article>
+            <article>
+                <h3>2.3. class</h3>
+                <p>O <code>class</code> padroniza algo dentro do CSS.</p>
+                <strong class="classe">[Aqui tem class]</strong>
+            </article>
+            <article>
+                <h3>2.4. type</h3>
+                <p>O <code>type</code> é específico do <code>input</code>, permitindo tipos como texto, número, cor, etc.</p>
+                <input type="number" aria-label="Campo numérico">
+            </article>
+            <article>
+                <h3>2.5. type color</h3>
+                <p>O <code>type="color"</code> abre um seletor de cores:</p>
+                <input type="color" aria-label="Seletor de cores">
+            </article>
+            <article>
+                <h3>2.6. src</h3>
+                <p>O atributo <code>src</code> é usado com a tag <code>img</code>:</p>
+                <img src="https://i.pinimg.com/originals/d4/4c/3e/d44c3e46625eab2c7f4499100adab367.jpg" alt="Descrição da imagem">
+            </article>
+            <article>
+                <h3>2.7. alt</h3>
+                <p>O atributo <code>alt</code> é importante para acessibilidade:</p>
+                <img src="https://i.pinimg.com/originals/d4/4c/3e/d44c3e46625eab2c7f4499100adab367.jpg" alt="Descrição da imagem">
+            </article>
+            <article>
+                <h3>2.8. href</h3>
+                <p>O <code>href</code> é o link da tag <code>a</code>:</p>
+                <p><a href="https://www.example.com" target="_blank">Visite nosso site</a></p>
+            </article>
+        </section>
+
+        <section id="textos">
+            <h2>3. Tipografia:</h2>
+            <article>
+                Tipografia no HTML refere-se ao estilo e aparência do texto em uma página web. Envolve a seleção de fontes, tamanhos, pesos, espaçamento e outras propriedades que afetam a legibilidade e a estética do texto. A tipografia é uma parte crucial do design web, pois influencia como o conteúdo é percebido e lido pelos usuários.
+
+                <p><b>Exemplo de Tipografia com HTML Puro:</b></p>
+
+                    <h1>Título de Nível 1</h1>
+                    <h2>Título de Nível 2</h2>
+                    <h3>Título de Nível 3</h3>
+                    <h4>Título de Nível 4</h4>
+                    <h5>Título de Nível 5</h5>
+                    <h6>Título de Nível 6</h6>
+                
+                    <p>Este é um parágrafo de texto padrão.</p>
+                    <p>Outro parágrafo de texto.</p>
+                
+                    <p>Este texto está em <strong>negrito</strong>.</p>
+                    <p>Este texto está em <em>itálico</em>.</p>
+                    <p>Este texto está <mark>destacado</mark>.</p>
+
+                    <p>Este texto está em <strong><em>negrito e itálico</em></strong>.</p>
+                
+                    <p>Este texto está <u>sublinhado</u>.</p>
+                
+                    <p>Este é um texto <small>menor</small>.</p>
+                    <p>Este é um texto <big>maior</big>.</p>
+                
+                    <p>Esta é uma linha.<br>Esta é outra linha.</p>
+                
+                    <p>Este é um texto em <code>monoespaçado</code>.</p>
+                    <pre>
+                        Texto em
+                        formato de
+                        bloco com
+                        espaçamento
+                        preservado.
+                    </pre>
+                
+                    <blockquote>
+                    Este é um bloco de citação. Geralmente é usado para citar um parágrafo ou uma frase longa.
+                    </blockquote>
+                
+                    <p>Este é um texto com <sub>subscrito</sub> e <sup>sobrescrito</sup>.</p>
+            </article>     
+        </section>
+
+        <section id="listas">
+            <h2>4. Listas Ordenadas e Não Ordenadas:</h2>
+            <article>
+                <h3>4.1. Lista Ordenada</h3>
+                <p>Uma lista ordenada possui numeração para cada item da lista. Utilizando a tag "ol" faço uma lista ordenada, para adicionar os itens nessa lista eu coloco a tag "li" dentro da "ol". Conforme o exemplo abaixo:</p>
+                    <ol>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ol>
+
+                <p>É possível colocar uma lista ordenada dentro de uma "li". Conforme abaixo:</p>
+                    <ol>
+                        <li>item 1</li>
+                        <li>item 2</li>
+                        <li>item 3</li>
+                        <li>item 4
+                            <ol>
+                                <li>item 4.1</li>
+                                <li>item 4.2</li>
+                                <li>item 4.3</li>
+                            </ol>
+                        </li>
+                    </ol> 
+            </article>
+            <article>
+                <h3>4.2. Lista Não Ordenada</h3>
+                <p>Uma lista não ordenada não possui numeração para cada item da lista e sim marcadores "bolinhas" ou outro tipo de marcador que desejar. Utilizando a tag "ul" faço uma lista não ordenada, para adicionar os itens nessa lista eu coloco a tag "li" dentro da "ul". Conforme o exemplo abaixo:</p>
+                <ul>
+                    <li>Item A</li>
+                    <li>Item B</li>
+                    <li>Item C</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="links">
+            <h2>5. Links:</h2>
+            <article>
+                <h3>5.1. Links Internos e Externos</h3>
+                <p>O links é pra colocar uma conexão com alguma outra pagina dentro da sua pagina inicial. Você pode incluir um link utilizando a tag <code>a</code> em seguida "colando" o endereço da pagina que voce deseja referenciar dentro do <code>href</code>, também é preciso dar um nome de indicação para o seu link, escrevendo entre os <code>>/</code>" do <code>a</code>. É possível configurar para abrir o link em uma nova página, escrevendo dentro do <code>a</code> a tag <code>target</code> e selecionando <code>_blank</code>, já utilizando o <code>_self</code>, ele fica no comportamento padrão, vai abrir na mesma pagina.</p>
+                <p><b>Exemplo:</b></p>
+                    <a href="https://github.com/paulaalessandrars" target="_blank">Meu github (abrindo em nova página)</a>
+                    <br>
+                    <br>
+                    <a href="https://github.com/paulaalessandrars" target="_self">Meu github (abrindo na mesma página)</a>
+            </article>
+            <article>
+                <h3>5.2. Title</h3>
+                Posso deixar ainda melhor utilizando o <code>title</code> no meu link, assim aparecerá um balão de mensagem quando eu passar o indicador do mouse no texto de link, pode ser um breve anuncio ou explicação. 
+                <p><b>Exemplo:</b></p>
+                    <a href="https://www.linkedin.com/in/paulaalessandrars/" target="_blank" title="Me siga no LinkedIn! 😄">Meu LinkedIn</a>
+            </article>
+            <article>
+                <h3>5.3. About me</h3>
+                Consigo criar um link utilizando a minha propria pagina como referencia. Criando um outro arquivo html (about), posso fazer um link dentro da pagina principal (index) que me leve até a página "about".
+                <p><b>Exemplo:</b></p>
+                <a href="about.html" target="_self" title="Wellcome to my life! 😄">Sobre mim</a>
+            </article>
+            <article>
+                <h3>5.4. Links Internos</h3>
+                Posso referenciar os pontos das paginas, um link que ao clicar me leve para outra parte da pagina. Faço isso inserindo um <code>id</code> no <code>h1,h2, h3</code> ou etc. onde eu quero que o meu link vá e depois indicando <code># + id</code> no <code>href</code>. 
+                <p><b>Exemplo:</b></p>
+                <a href="#tags"> << voltar para inicio</a>
+            </article>
+
+        </section>
+    </main>
+
+    <footer> <!-- Rodapé do documento -->
+        <p><a href="https://github.com/paulaalessandrars" target="_blank" rel="noopener noreferrer">&copy; 2024 Paula Alessandra. Todos os direitos reservados.</a></p> <!-- Link para GitHub, abrindo em uma nova aba -->
+    </footer>
+</body>
+</html>

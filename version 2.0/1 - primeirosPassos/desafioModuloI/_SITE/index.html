@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first HTML</title>
+</head>
+<body>
+    <br>
+    <strong><h1 id="inicio">Elaborar um website, utilizando uma estrutura bem básica, utilizando tags aprendidas:</h1></strong>
+    <h3>
+         - Utilizar todas as tags: h1 até h6, p, mark, small, i, u, strong, ol, ul, li, a, hr, sub, sup, blockquote;
+        <br>
+        <br>
+        - Utilizar novas tags sugeridas: font, del, p, abbr (a ideia é buscar estas tags na internet, entender como ela funciona e utilizar no texto).
+        <br>
+        <br>
+        Desafio realizado abaixo:
+    </h3>
+
+    <hr>
+    <br>
+    <br>
+    <strong><h1 id="inicio">Introdução ao HTML</h1></strong>
+
+    <small>
+        <<
+            <a href="../../primeirosPassos.html">(Voltar)</a>
+    </small>
+    <br>
+    <br>
+
+    <hr>
+    <h2>Índice</h2>
+        <ol>
+            <li><a href="#tags">TAGS</a></li>
+            <li><a href="#atributos">ATRIBUTOS DAS TAGS</a></li>
+            <li><a href="#textos">TEXTOS: TIPOGRAFIA</a></li>
+            <li><a href="#listas">LISTAS ORDENADAS E NÃO ORDENADAS</a></li>
+            <li><a href="#links">LINKS</a></li>
+        </ol>
+        <hr>
+        <br>
+
+
+    <h3 id="tags"><strong>1. Tags:</strong></h3>
+
+        <small><a href="#inicio">(voltar)</a></small>
+            <br>
+            <br>
+
+        <i>1.1. O "i" deixa itálico;</i>
+            <br>
+            <br>
+        <strong>1.2. O "strong" deixa negrito;</strong>
+            <br>
+            <br>
+        <strong><i>1.3. O "strong" e o "i" combinados deixam em itálico e negrito;</i></strong>
+            <br>
+            <br>
+        1.4. O "br" faz uma quebra de linha;
+            <br>
+            <br>
+        1.5. O "input" abre uma caixa para inserção de algum dado, é usado em formulários, por exemplo. O "input" nao tem tag de fechamento igual as outras tags. Ele sozinho ja é um campo, nesse caso é um campo "text", so pormite entrada de textos.
+            <input type="text"/>
+            <br>
+            <br>
+        1.6. O "img" é para adicionar imagens e assim como o "input" tbm nao tem fechamento, pois é um campo.
+            <img src="" alt="">
+            <br>
+            <br>
+        1.7. A tag <font> no HTML é uma forma obsoleta de estilizar texto. Ela foi usada principalmente para definir a fonte, o tamanho e a cor do texto, mas foi descontinuada nas especificações HTML5 em favor do uso de CSS para estilização. No entanto, se você precisar usar essa tag em um contexto específico (embora não recomendado), veja como você pode utilizá-la:
+            <br>
+            <br>
+            <code><font color="red">Este é um texto vermelho.</font>
+            </code>
+            <br>
+            <br>
+        1.8. A tag "del" em HTML é usada para indicar texto que foi deletado ou removido de um documento. O texto dentro desta tag é normalmente exibido com uma linha atravessada (strike-through). Esta tag é útil para mostrar alterações em documentos, como em revisões de textos, ou para indicar que certas partes do conteúdo foram removidas.
+            <br>
+            <br>
+            <code><del>Exemplo de Uso da Tag</del></code>
+            <br>
+            <br>
+        1.9. A tag <abbr> em HTML é usada para marcar abreviações ou acrônimos, fornecendo uma explicação completa ao passar o mouse sobre o texto. O atributo title é utilizado para fornecer o significado completo da abreviação. Aqui está um exemplo:
+            <br>
+            <br>
+            <p>O <abbr title="Hypertext Markup Language">HTML</abbr> é a linguagem padrão para criação de páginas web.</p>
+            <br>
+            <br>
+
+
+    <h3 id="atributos"><strong>2. Atributos:</strong></h3>
+
+        <small><a href="#inicio">(voltar)</a></small>
+            <br>
+            <br>
+
+        2.1. O "id" é um identificador para usar em conjunto com o javascript para alguma programação em especifico. Esse id serve pra voce identificar no javascript qual elemento que voce deseja alterar.
+            <br>
+            <strong id="titulo">[Aqui tem id]</strong>
+            <br>
+            <br>
+        2.2. O "style" é um atributo utilizado majoriatiamente no css. O css é uma forma de formatar um html, estilização, deixar bonito.
+            <br>
+            <strong style="color: blueviolet;">[Aqui tem style]</strong>
+            <br>
+            <br>
+        2.3. O "class" é um atributo que padroniza algo dentro do css
+            <br>
+            <strong class="classe">[Aqui tem class]</strong>
+            <br>
+            <br>
+        2.4. O "type" é espeficifico do "input", podem ser do tipo texto, numero, color e etc. O Number, por exemplo, permite apenas inserção de numeros:
+            <br>
+            <input type="number">
+            <br>
+            <br>
+        2.5. O "type color" abre um seletor de cores:
+            <br>
+            <input type="color">
+            <br>
+            <br>
+        2.6. O atributo "src" é utilizado somente com a tag "img" e dentro dela voce coloca o endereço da imagem que deseja adicionar:
+            <br>
+            <br>
+            <img src="https://i.pinimg.com/originals/d4/4c/3e/d44c3e46625eab2c7f4499100adab367.jpg" alt="">
+            <br>
+            <br>
+        2.7. É possível alterar a largura da imagem utilizando o atributo "width" junto ao "src":
+            <br>
+            <br>
+            <img width="1000" src="https://i.pinimg.com/originals/d4/4c/3e/d44c3e46625eab2c7f4499100adab367.jpg" alt="">
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+    <h3 id="textos"><strong>3. Textos: Tipografia</strong></h3>
+
+        <small><a href="#inicio">(voltar)</a></small>
+            <br>
+            <br>
+
+        <h1>Exemplo de H1 - Título principal</h1>
+        <p><strong>O "p" é utilizado para paragrafos:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, debitis! Explicabo magni dignissimos quo totam. Commodi esse dolorem, dolorum, nam, temporibus ipsum ut cum similique error voluptas repellat quis quo.</p>
+       
+
+        <blockquote><i>O blockquote é utilizado para fazer uma citação. E colocando a citanção entre "i" deixo em itálico.</i></blockquote>
+        
+        <h2>Exemplo de H2 - Subtítulo</h2>
+        <p>APENAS MAIS UM PARAGRAFO DA PAGINA: Lorem ipsum dolor sit amet consectetur, adipisicing elit. <strong>SE EU QUISER DEIXAR UMA PALAVRA OU FRASE EM NEGRITO NO MEIO DA PAGINA, BASTA EU COLOCAR ENTRE "strong" E TA FEITO 😄</strong><u>SE EU QUISER QUE FIQUE SUBLINHADA, BASTA DEIXAR ENTRE "u" E TA FEITO 😄</u><strong><i> COMBINAR OS DOIS TAMBÉM É POSSÍVEL. </i></strong><mark>Se quiser colocar um marca texto no paragragro é só eu utilizar o "mark".</mark> </p>
+
+        <p>Quando eu quiser deixar agum numero com "ao quadrado" ou colocar como simbolo de registrado, eu posso utilizar a tag "sup", conforme o exemplo abaixo
+            <blockquote>2<sup>2</sup></blockquote>
+            <blockquote>Paula Alessandra<sup>R</sup></blockquote>
+        </p>
+        
+
+        <h3>Exemplo de H3</h3>
+        <h4>Exemplo de H4</h4>
+        <h5>Exemplo de H5</h5>
+        <h6>Exemplo de H6</h6>
+        <br>
+
+
+    <h3 id="listas"><strong>4. Listas Ordenadas e Não Ordenadas</strong></h3>
+
+        <small><a href="#inicio">(voltar)</a></small>
+            <br>
+            <br>
+
+        4.1. Listas Ordenadas
+            <br>
+            <br>
+            Uma lista ordenada possui numeração para cada item da lista. 
+            Utilizando a tag "ol" faço uma lista ordenada, para adicionar os itens nessa lista eu coloco a tag "li" dentro da "ol". Conforme o exemplo abaixo:
+                <br>
+                <code>
+                    <ol>
+                        <li>Paula</li>
+                        <li>Alessandra</li>
+                        <li>Rodrigues</li>
+                        <li>dos Santos</li>
+                    </ol>
+                </code>
+                <br>
+
+                É possível colocar uma lista ordenada dentro de uma "li". Conforme abaixo:
+                <br>
+                <br>
+                <code>
+                    <ol>
+                        <li>item 1</li>
+                        <li>item 2</li>
+                        <li>item 3</li>
+                        <li>item 4
+                            <ol>
+                                <li>item 4.1</li>
+                                <li>item 4.2</li>
+                                <li>item 4.3</li>
+                            </ol>
+                        </li>
+                    </ol> 
+                </code>
+            <br>
+            <br>
+        4.2. Listas Não Ordenadas
+            <br>
+            <br>
+            Uma lista não ordenada não possui numeração para cada item da lista e sim marcadores "bolinhas" ou outro tipo de marcador que desejar. 
+            Utilizando a tag "ul" faço uma lista não ordenada, para adicionar os itens nessa lista eu coloco a tag "li" dentro da "ul". Conforme o exemplo abaixo:
+                <ul>
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 3</li>
+                </ul>
+             <br>
+
+
+    <h3 id="links"><strong>5. Links</strong></h3>
+
+        <small><a href="#inicio">(voltar)</a></small>
+            <br>
+            <br>
+        5.1. O links é pra colocar uma conexão com alguma outra pagina dentro da sua pagina inicial. Você pode incluir um link utilizando a tag "a" em seguida "colando" o endereço da pagina que voce deseja referenciar dentro do "href", também é preciso dar um nome de indicação para o seu link, escrevendo entre os ">/" do "a". É possível configurar para abrir o link em uma nova página, escrevendo dentro do "a" a tag "target" e selecionando "_blank", já utilizando o "_self", ele fica no comportanmento padrão, vai abrir na mesma pagina.
+        Exemplo abaixo:
+            <br>
+            <br>
+            <a href="https://github.com/paulaalessandrars" target="_blank">Meu github (abrindo em nova página)</a>
+            <br>
+            <br>
+            <a href="https://github.com/paulaalessandrars" target="_self">Meu github (abrindo na mesma página)</a>
+            <br>
+            <br>
+
+        5.2. Posso deixar ainda melhor utilizando o "title" no meu link, assim aparecerá um balão de mensagem quando eu passar o indicador do mouse no texto de link, pode ser um breve anuncio ou explicação. Exemplo abaixo:
+            <br>
+            <br>
+            <a href="https://www.linkedin.com/in/paulaalessandrars/" target="_blank" title="Me siga no LinkedIn! 😄">Meu LinkedIn</a>
+            <br>
+            <br>
+
+        5.3. Consigo criar um link utilizando a minha propria pagina como referencia. Criando um outro arquivo html (about), posso fazer um link dentro da pagina principal (index) que me leve até a página "about". Conforme exemplo abaixo:
+            <br>
+            <br>
+            <a href="about.html" target="_self" title="Wellcome to my life! 😄">Sobre mim</a>
+            <br>
+            <br>
+            
+        5.4. Posso referenciar os pontos das paginas, um link que ao clicar me leve para outra parte da pagina. Faço isso inserindo um "id" no h1,h2, h3 ou etc. onde eu quero que o meu link vá e depois indicando hashtag + id no href. Conforme o exemplo abaixo:
+            <br>
+            <br>
+            <a href="#inicio">voltar para inicio</a>
+            <br>
+            <br>
+            <br>
+</body>
+</html>
