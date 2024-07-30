@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML I - Conceitos Básicos</title>
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+</head>
+<body>
+    <header id="header">
+        <h1>Trabalhando com Mídias utilizando HTML</h1>
+    </header>
+
+    <nav id="menu" aria-label="Menu de navegação">
+        <ul>
+            <li><a href="#img">Tag Img</a></li>
+            <li><a href="#audio">Tag Audio</a></li>
+            <li><a href="#video">Tag Video</a></li>
+            <li><a href="#track">Tag Track</a></li>
+            <li><a href="#iframe">Tag Iframe</a></li>
+            <li><a href="../../2 - conceitosBasicos/conceitosBasicos.html">&lt;&lt; Voltar</a></li>
+        </ul>
+    </nav>
+    
+    <main id="content">
+        <section id="img">
+            <h2>1. Tag img</h2>
+            <p>A tag <code>img</code> é usada para incorporar imagens em uma página HTML. Ela é auto-fechada e não possui tag de fechamento. O formato <code>jpg</code> comprime a imagem, mas perde um pouco da resolução, enquanto o <code>png</code> mantém a resolução, mas é mais pesado e tem a vantagem de suportar transparência. O <code>jpg</code> é mais adequado para fotos, enquanto o <code>png</code> é melhor para logotipos.</p>
+            <p>O formato <code>svg</code> define a imagem por vetores, permitindo que a imagem não perca resolução, mas é limitado a imagens opacas e sólidas.</p>
+
+            <p><strong>Exemplos:</strong></p>
+
+            <h3>Imagem Simples</h3>
+            <img src="assets/images/battle.gif" alt="Descrição da imagem" loading="lazy">
+
+            <h3>Imagem com Tamanho Especificado</h3>
+            <img src="assets/images/battle.gif" alt="Descrição da imagem" width="100" height="100" loading="lazy">
+
+            <h3>Imagem com Texto Alternativo e Título</h3>
+            <img src="assets/images/battle.gif" alt="Descrição da imagem" title="Título da imagem" width="400" height="300" loading="lazy">
+
+            <p><strong>Explicação:</strong></p>
+            <ul>
+                <li><strong>img:</strong> Usada para adicionar imagens.</li>
+                <li><strong>src:</strong> Caminho da imagem.</li>
+                <li><strong>alt:</strong> Texto alternativo para acessibilidade.</li>
+                <li><strong>width e height:</strong> Definem as dimensões da imagem.</li>
+                <li><strong>title:</strong> Texto exibido ao passar o mouse sobre a imagem.</li>
+            </ul>
+        </section>
+
+        <section id="audio">
+            <h2>2. Tag audio</h2>
+            <p>A tag <code>audio</code> é usada para incorporar conteúdo de áudio em uma página HTML.</p>
+
+            <p><strong>Exemplos:</strong></p>
+
+            <h3>Áudio com Controles</h3>
+            <audio controls>
+                <source src="assets/audio/audio.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+
+            <h3>Áudio com Vários Formatos</h3>
+            <p>Para garantir a compatibilidade com diferentes navegadores, é uma boa prática fornecer múltiplos formatos de áudio.</p>
+            <audio controls>
+                <source src="assets/audio/audio.mp3" type="audio/mpeg">
+                <source src="assets/audio/audioCopia.ogg" type="audio/ogg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+
+            <h3>Áudio com Autoplay e Loop</h3>
+            <audio autoplay controls loop>
+                <source src="assets/audio/audio.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+
+            <h3>Áudio com Texto Alternativo</h3>
+            <audio controls>
+                <source src="assets/audio/audio.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio. <a href="assets/audio/audio.mp3" download>Baixe o áudio aqui</a>.
+            </audio>
+
+            <p><strong>Explicação:</strong></p>
+            <ul>
+                <li><strong>audio:</strong> Usada para adicionar áudio às páginas web.</li>
+                <li><strong>controls:</strong> Adiciona controles de reprodução.</li>
+                <li><strong>autoplay:</strong> Toca o áudio automaticamente ao carregar a página.</li>
+                <li><strong>loop:</strong> Repete o áudio continuamente.</li>
+                <li><strong>muted:</strong> Inicia o áudio no modo mudo.</li>
+                <li><strong>preload:</strong> Controla o pré-carregamento do áudio.</li>
+            </ul>
+        </section>
+
+        <section id="video">
+            <h2>3. Tag video</h2>
+            <p>A tag <code>video</code> é usada para incorporar vídeos em uma página HTML.</p>
+
+            <h3>Vídeo com Controles</h3>
+            <video controls width="600" height="400">
+                <source src="assets/video/Halo.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+
+            <h3>Vídeo com Vários Formatos</h3>
+            <video controls width="600" height="400">
+                <source src="assets/video/Halo.mp4" type="video/mp4">
+                <source src="assets/audio/Halo copy.ogg" type="audio/ogg">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>    
+
+            <h3>Vídeo com Autoplay e Loop</h3>
+            <video controls autoplay loop width="600" height="400">
+                <source src="assets/video/Halo.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>    
+
+            <h3>Vídeo com Poster</h3>
+            <video width="600" height="400" controls poster="midia/heyley.jpg">
+                <source src="assets/video/Halo.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+
+            <h3>Vídeo com Texto Alternativo</h3>
+            <video controls width="600" height="400">
+                <source src="assets/video/Halo.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo. <a href="assets/video/Halo.mp4" download>Baixe o vídeo aqui</a>.
+            </video>
+
+            <p><strong>Explicação:</strong></p>
+            <ul>
+                <li><strong>video:</strong> Usada para adicionar vídeos às páginas web.</li>
+                <li><strong>controls:</strong> Adiciona controles de reprodução.</li>
+                <li><strong>autoplay:</strong> Toca o vídeo automaticamente ao carregar a página.</li>
+                <li><strong>loop:</strong> Repete o vídeo continuamente.</li>
+                <li><strong>muted:</strong> Inicia o vídeo no modo mudo.</li>
+                <li><strong>poster:</strong> Exibe uma imagem antes do vídeo começar a tocar.</li>
+                <li><strong>width e height:</strong> Definem as dimensões do vídeo.</li>
+            </ul>
+        </section>
+
+        <section id="track">
+            <h2>4. Tag track</h2>
+            <p>A tag <code>track</code> é usada para adicionar faixas de texto a elementos de mídia, como vídeos e áudios.</p>
+
+            <h3>Vídeo com Legendas</h3>
+            <video controls width="600">
+                <source src="assets/video/Halo.mp4" type="video/mp4">
+                <track src="assets/subtitles/Halo.vtt" kind="subtitles" srclang="en" label="English" default>
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+
+            <h3>Vídeo com Capítulos</h3>
+            <video controls width="600">
+                <source src="assets/video/Halo.mp4" type="video/mp4">
+                <track src="assets/subtitles/chapters_en.vtt" kind="chapters" srclang="en" label="Capítulos">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+
+            <p><strong>Explicação:</strong></p>
+            <ul>
+                <li><strong>src:</strong> Caminho para o arquivo de texto da faixa.</li>
+                <li><strong>kind:</strong> Tipo de faixa (subtitles, captions, descriptions, chapters, metadata).</li>
+                <li><strong>srclang:</strong> Idioma da faixa.</li>
+                <li><strong>label:</strong> Título da faixa.</li>
+                <li><strong>default:</strong> Define a faixa como padrão.</li>
+            </ul>
+        </section>
+
+        <section id="iframe">
+            <h2>5. Tag iframe</h2>
+            <p>A tag <code>iframe</code> é usada para incorporar outra página HTML dentro de uma página HTML.</p>
+
+            <h3>Iframe Básico</h3>
+            <iframe src="https://www.dio.me" width="600" height="400" title="Página DIO" loading="lazy">
+                Seu navegador não suporta iframes.
+            </iframe>
+
+            <h3>Iframe com Vídeo do YouTube</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TTdBiwgVkME?si=KLiZWAXq6t1rDylS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+
+            <h3>Iframe com Mapa do Google</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3522.0473448502207!2d-48.61868810459672!3d-28.023028737368463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9526d14b0432914d%3A0xa2aabb9e6a1d3a2f!2sCentro%20Hist%C3%B3rico%20de%20Garopaba!5e0!3m2!1spt-BR!2sbr!4v1719237860798!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <h3>Iframe com Restrições de Segurança</h3>
+            <iframe src="https://www.dio.me" width="600" height="400" sandbox="allow-scripts allow-same-origin" title="Página DIO com restrições de segurança">
+                Seu navegador não suporta iframes.
+            </iframe>
+
+            <p><strong>Explicação:</strong></p>
+            <ul>
+                <li><strong>src:</strong> Define a URL da página que será incorporada.</li>
+                <li><strong>width e height:</strong> Define a largura e altura do iframe.</li>
+                <li><strong>sandbox:</strong> Aplica restrições de segurança ao conteúdo.</li>
+                <li><strong>allow:</strong> Especifica quais recursos são permitidos.</li>
+                <li><strong>allowfullscreen:</strong> Permite que o iframe entre em modo de tela cheia.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer> <!-- Rodapé do documento -->
+        <p><a href="https://github.com/paulaalessandrars" target="_blank" rel="noopener noreferrer">&copy; 2024 Paula Alessandra. Todos os direitos reservados.</a></p> <!-- Link para GitHub, abrindo em uma nova aba -->
+    </footer>
+
+</body>
+</html>
