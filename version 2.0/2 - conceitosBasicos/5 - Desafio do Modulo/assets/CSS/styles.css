@@ -1,0 +1,114 @@
+/* Estilização geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Deixou a cor de fundo verde no menu e deu magem de 10px, alinhando o texto no centro */
+#menu {
+    background-color: #25489a;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    
+}
+
+/* Deixou o espaçamento de 15px entre as palavras, a cor branca e em negrito */
+#menu a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    
+}
+
+/* Deixou um underline ao passar o mouse sobre os menus */
+#menu a:hover {
+    text-decoration: underline;
+}
+
+/* Definiu os tamanhos da imagem no cabeçalho*/
+#header img {
+    width: 100%;
+    height: justify;
+}
+
+/* Definiu o fundo do rodapé, a cor do texto, o alinhamento no centro, a margem de 10px, a posição fixa, a distancia do rodape para o final da pagina*/
+#footer {
+    background-color: #25489a;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    position: fixed;
+    bottom: -5px;
+    width: 100%;
+}
+
+#content {
+    padding: 80px;
+}
+
+/* Estilização específica para a página de horários */
+/* Tamanho da tabela, borda da tabela, mas sem ter borda na linha inicial, distancia da tabela até o texto na parte de cima */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* borda da tabela e das colunas e linhas */
+table, th, td {
+    border: 1px solid #25489a;
+}
+
+/* espaçamento e alinhamento das colunas e linhas */
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+/* cor de fundo e cor do texto da das colunas */
+th {
+    background-color: #25489a;
+    color: white;
+}
+
+
+/* cestilização formulários, margem do formulario */
+form {
+    margin-top: 20px;
+}
+
+/* label do formulario*/
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+/* estilização dos espaços de preenchimento*/
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #888888;
+    border-radius: 4px;
+}
+
+/* Estilização do botao enviar */
+form input[type="submit"], form input[type="reset"] {
+    width: auto;
+    background-color: #25489a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+/* Estilização do botao limpar */
+form input[type="submit"]:hover, form input[type="reset"]:hover {
+    background-color: #25489a;
+}
