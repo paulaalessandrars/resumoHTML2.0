@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Exemplo de Produtos</title>
+    <style>
+        table {
+            box-shadow: 9px 14px 43px 4px rgba(0,0,0,0.33);
+            border: solid 2px;
+            border-radius: 9px;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+        }
+        table thead th {
+            background-color: rgb(234, 145, 82);
+            color: black;
+        }
+        table tfoot tr {
+            background-color: rgb(239, 199, 147);
+            color: black;
+        }
+        /* Efeito zebrado na tabela */
+        table tbody tr:nth-child(even) td {
+            background-color: rgb(227, 159, 90);
+            color: black;
+        }
+        /* Efeito de trocar a cor ao passar o mouse */
+        table tbody tr:hover td {
+            background-color: rgb(212, 109, 6);
+            color: whitesmoke;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">Tabela Exemplo de Produtos</h1>
+    </header>
+    <main>
+        <table>
+            <caption>Tabela de produtos e seus detalhes</caption>
+            <thead>
+                <tr>
+                    <th colspan="4">MINHA TABELA MANEIRA</th>
+                </tr>
+                <tr>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Vendedor</th>
+                    <th>Preço por Unidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Chocolate ao Leite</td>
+                    <td>50</td>
+                    <td>Julia</td>
+                    <td>R$ 15,00</td>
+                </tr>
+                <tr>
+                    <td>Cheetos</td>
+                    <td>20</td>
+                    <td>Paula</td>
+                    <td>R$ 16,00</td>
+                </tr>
+                <tr>
+                    <td>Panetone</td>
+                    <td>100</td>
+                    <td>Henrique</td>
+                    <td>R$ 12,00</td>
+                </tr>
+                <tr>
+                    <td>Pizza de Sardinha</td>
+                    <td>62</td>
+                    <td>Lisete</td>
+                    <td>R$ 20,00</td>
+                </tr>
+                <tr>
+                    <td>Cerveja Schin</td>
+                    <td>36</td>
+                    <td>Tatiane</td>
+                    <td>R$ 2,99</td>
+                </tr>
+                <tr>
+                    <td>Bolacha</td>
+                    <td>1000</td>
+                    <td>Paulo</td>
+                    <td>R$ 9,00</td>
+                </tr>
+                <tr>
+                    <td>Energético</td>
+                    <td>60</td>
+                    <td>Guilherme</td>
+                    <td>R$ 12,00</td>
+                </tr>
+                <tr>
+                    <td>Açaí</td>
+                    <td>100</td>
+                    <td>Rafaella</td>
+                    <td>R$ 22,00</td>
+                </tr>
+                <tr>
+                    <td>Churrasco</td>
+                    <td>200</td>
+                    <td>Giciano</td>
+                    <td>R$ 120,00</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total:</td>
+                    <td>R$ 1050,00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+    <footer>
+        <p style="text-align: center;">&copy; 2024 Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

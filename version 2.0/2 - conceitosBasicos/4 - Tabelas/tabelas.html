@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML I - Conceitos Básicos</title>
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+    <meta name="description" content="Aprenda a criar e estilizar tabelas em HTML.">
+</head>
+
+<body>
+    <header id="header">
+        <h1>Criando Tabelas com HTML</h1>
+    </header>
+
+    <nav id="menu">
+        <ul>
+            <li><a href="#table">TAG TABLE</a></li>
+            <li><a href="#tr">TAG TR</a></li>
+            <li><a href="#tdth">TAG TD e TH</a></li>
+            <li><a href="#bhf">TAG TBODY, THEAD e TFOOT</a></li>
+            <li><a href="#estilizando">ESTILIZANDO TABELAS</a></li>
+            <li><a href="#referencias">REFERÊNCIAS</a></li>
+            <li><a href="../../2 - conceitosBasicos/conceitosBasicos.html"><< Voltar</a></li>
+        </ul>
+    </nav>
+
+    <main id="content">
+        <section id="table">
+            <h2>1. Tag table</h2>
+            <p>A tag <code>&lt;table&gt;</code> em HTML é usada para criar tabelas que organizam dados em linhas e colunas. É uma das formas mais comuns de exibir informações tabulares na web. Aqui estão alguns conceitos básicos sobre como a tag <code>&lt;table&gt;</code> funciona:</p>
+            <ol>
+                <li>
+                    <b>Estrutura Básica:</b> A tag <code>&lt;table&gt;</code> define o início de uma tabela. Dentro dela, você utiliza outras tags para estruturar a tabela:
+                    <ul>
+                        <li><code>&lt;tr&gt;</code> (table row): Define uma linha na tabela.</li>
+                        <li><code>&lt;th&gt;</code> (table header cell): Define um cabeçalho de coluna ou linha na tabela (opcional).</li>
+                        <li><code>&lt;td&gt;</code> (table data cell): Define uma célula de dados na tabela.</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Atributos Importantes:</b>
+                    <ul>
+                        <li><code>border</code>: Define a largura da borda da tabela (geralmente em pixels).</li>
+                        <li><code>cellpadding</code>: Define o espaçamento interno das células.</li>
+                        <li><code>cellspacing</code>: Define o espaçamento entre as células.</li>
+                        <li><code>width</code> e <code>height</code>: Define a largura e altura da tabela, respectivamente.</li>
+                        <li><code>align</code>: Alinha a tabela à direção escolhida.</li>
+                        <li><code>summary</code>: Adiciona uma descrição à tabela, útil para leitores de tela.</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Exemplo Básico:</b>
+                    <table class="tabelas" summary="Esta tabela se refere ao exemplo básico" width="100%" cellpadding="10" cellspacing="5">
+                        <caption>Exemplo de Tabela Básica</caption>
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Idade</th>
+                                <th>País</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>João</td>
+                                <td>30</td>
+                                <td>Brasil</td>
+                            </tr>
+                            <tr>
+                                <td>Maria</td>
+                                <td>25</td>
+                                <td>Portugal</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li>
+                    <b>Elementos Relacionados:</b>
+                    <ul>
+                        <li><code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>: Elementos opcionais para organizar cabeçalhos, corpo e rodapé da tabela.</li>
+                        <li><code>&lt;caption&gt;</code>: Elemento opcional para adicionar um título descritivo à tabela.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>A tag <code>&lt;table&gt;</code> é essencial para estruturar e apresentar dados tabulares de forma organizada e acessível em páginas web. Ela permite criar grids de informações onde cada célula pode conter textos, imagens, links ou outros elementos HTML.</p>
+        </section>
+
+        <section id="tr">
+            <h2>2. Tag tr</h2>
+            <p>A tag <code>&lt;tr&gt;</code> em HTML define uma linha dentro de uma tabela (<code>&lt;table&gt;</code>). Cada <code>&lt;tr&gt;</code> contém células de dados (<code>&lt;td&gt;</code>) ou células de cabeçalho (<code>&lt;th&gt;</code>). É usada para organizar e estruturar dados em colunas dentro de uma tabela.</p>
+            <b>Estrutura e Uso Básico:</b>
+            <ul>
+                <li><code>&lt;tr&gt;</code> é abreviação de "table row", ou seja, "linha da tabela".</li>
+                <li>Dentro de uma <code>&lt;tr&gt;</code>, você pode incluir células de dados (<code>&lt;td&gt;</code>) ou células de cabeçalho (<code>&lt;th&gt;</code>).</li>
+                <li>As células são organizadas automaticamente em colunas, alinhadas com as células correspondentes em outras linhas.</li>
+            </ul>
+            <b>Exemplo:</b>
+            <!-- 
+            <style>
+                table tr:nth-child(even) {
+                    background-color: rgb(169, 197, 228);
+                }
+
+                table tr:hover td {
+                    background-color: rgb(205, 176, 58);
+                }
+            </style>
+            -->
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>País</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>João</td>
+                        <td>30</td>
+                        <td>Brasil</td>
+                    </tr>
+                    <tr>
+                        <td>Maria</td>
+                        <td>25</td>
+                        <td>Portugal</td>
+                    </tr>
+                    <tr>
+                        <td>Paula</td>
+                        <td>30</td>
+                        <td>Brasil</td>
+                    </tr>
+                    <tr>
+                        <td>Julia</td>
+                        <td>24</td>
+                        <td>Brasil</td>
+                    </tr>
+                    <tr>
+                        <td>Pedro</td>
+                        <td>24</td>
+                        <td>Espanha</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><b>Neste exemplo:</b></p>
+            <ul>
+                <li>A primeira <code>&lt;tr&gt;</code> define uma linha de cabeçalho com três células de cabeçalho (<code>&lt;th&gt;</code>): "Nome", "Idade" e "País".</li>
+                <li>As <code>&lt;tr&gt;</code> seguintes definem linhas de dados com três células de dados (<code>&lt;td&gt;</code>) cada, representando informações sobre "João" e "Maria".</li>
+            </ul>
+            <b>Atributos e Estilização:</b>
+            <ul>
+                <li><code>&lt;tr&gt;</code> pode ter atributos como <code>class</code> e <code>id</code> para estilização e seleção via CSS ou manipulação via JavaScript.</li>
+                <li>É comum usar CSS para estilizar <code>&lt;tr&gt;</code> e suas células (<code>&lt;td&gt;</code> e <code>&lt;th&gt;</code>), ajustando cores de fundo, bordas, margens, entre outros.</li>
+            </ul>
+        </section>
+
+        <section id="tdth">
+            <h2>3. Tag td e th</h2>
+            <ul>
+                <li>
+                    <p><code>&lt;td&gt;</code> (table data cell): A tag <code>&lt;td&gt;</code> é usada para definir células de dados dentro de uma tabela. Cada <code>&lt;td&gt;</code> representa uma célula individual que contém dados.</p>
+                    <b>Exemplos:</b>
+                    <table border="1" width="100%">
+                        <tr>
+                            <td>João</td>
+                            <td>30</td>
+                            <td>Brasil</td>
+                        </tr>
+                        <tr>
+                            <td>Maria</td>
+                            <td>25</td>
+                            <td>Portugal</td>
+                        </tr>
+                    </table>
+                    <b>Atributos e Estilização:</b>
+                    <ul>
+                        <li><code>colspan</code>: Define o número de colunas que a célula deve abranger.</li>
+                        <li><code>rowspan</code>: Define o número de linhas que a célula deve abranger.</li>
+                        <li>Estilização CSS: Você pode aplicar estilos às células <code>&lt;td&gt;</code> usando CSS para ajustar cores, bordas, espaçamento, entre outros.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><code>&lt;th&gt;</code> (table header cell): A tag <code>&lt;th&gt;</code> é usada para definir células de cabeçalho dentro de uma tabela. As células <code>&lt;th&gt;</code> geralmente contêm títulos ou rótulos que descrevem o conteúdo das colunas ou linhas.</p>
+                    <b>Exemplos:</b>
+                    <table border="1" width="100%">
+                        <tr>
+                            <th>Nome</th>
+                            <th>Idade</th>
+                            <th>País</th>
+                        </tr>
+                    </table>
+                    <b>Atributos e Estilização:</b>
+                    <ul>
+                        <li><code>scope</code>: Define o escopo da célula de cabeçalho, pode ser "col" (coluna), "row" (linha), "colgroup" (grupo de colunas) ou "rowgroup" (grupo de linhas).</li>
+                        <li>Estilização CSS: As células <code>&lt;th&gt;</code> podem ser estilizadas para se destacar visualmente das células <code>&lt;td&gt;</code> usando CSS, como negrito, alinhamento centralizado, cores de fundo, entre outros.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="bhf">
+            <h2>4. Tag tbody, thead e tfoot</h2>
+            <p>As tags <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> e <code>&lt;tfoot&gt;</code> em HTML são usadas para estruturar tabelas de forma mais semântica e organizada. Elas ajudam a separar o conteúdo da tabela em diferentes seções, facilitando a leitura e a manutenção do código.</p>
+            <ul>
+                <li><code>&lt;thead&gt;</code> (table header): Define o cabeçalho da tabela. Geralmente contém células de cabeçalho (<code>&lt;th&gt;</code>) que descrevem as colunas.</li>
+                <li><code>&lt;tbody&gt;</code> (table body): Define o corpo da tabela. Contém linhas de dados (<code>&lt;tr&gt;</code>) com células de dados (<code>&lt;td&gt;</code>).</li>
+                <li><code>&lt;tfoot&gt;</code> (table footer): Define o rodapé da tabela. Pode conter células de resumo ou informações adicionais.</li>
+            </ul>
+            <b>Exemplo Completo:</b>
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>País</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>João</td>
+                        <td>30</td>
+                        <td>Brasil</td>
+                    </tr>
+                    <tr>
+                        <td>Maria</td>
+                        <td>25</td>
+                        <td>Portugal</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Fonte: Exemplos de Tabelas HTML</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="estilizando">
+            <h2>5. Estilizando Tabelas com CSS</h2>
+            <p>Estilizar tabelas com CSS permite que você melhore a aparência visual e a usabilidade das suas tabelas. Aqui estão algumas dicas e técnicas comuns para estilizar tabelas usando CSS:</p>
+            <b>Estilização Básica:</b>
+            <!--<style>
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+
+                th, td {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    text-align: left;
+                }
+
+                tr:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+
+                tr:hover {
+                    background-color: #ddd;
+                }
+
+                th {
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    background-color: #4CAF50;
+                    color: white;
+                }
+            </style>-->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>País</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>João</td>
+                        <td>30</td>
+                        <td>Brasil</td>
+                    </tr>
+                    <tr>
+                        <td>Maria</td>
+                        <td>25</td>
+                        <td>Portugal</td>
+                    </tr>
+                </tbody>
+            </table>
+            <b>Dicas Adicionais:</b>
+            <ul>
+                <li>Use a propriedade <code>border-collapse</code> para colapsar as bordas da tabela, criando um visual mais limpo.</li>
+                <li>Adicione <code>:hover</code> em <code>&lt;tr&gt;</code> para destacar a linha que o cursor está passando por cima, melhorando a interatividade.</li>
+                <li>Utilize <code>:nth-child(even)</code> para alternar as cores das linhas, criando um efeito zebra que facilita a leitura.</li>
+            </ul>
+        </section>
+
+        <section id="referencias">
+            <h2>6. Referências</h2>
+            <p>Para saber mais sobre tabelas HTML e suas funcionalidades, consulte as seguintes fontes:</p>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank">MDN Web Docs: &lt;table&gt;</a></li>
+                <li><a href="https://www.w3schools.com/html/html_tables.asp" target="_blank">W3Schools: HTML Tables</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer> <!-- Rodapé do documento -->
+        <p><a href="https://github.com/paulaalessandrars" target="_blank" rel="noopener noreferrer">&copy; 2024 Paula Alessandra. Todos os direitos reservados.</a></p> <!-- Link para GitHub, abrindo em uma nova aba -->
+    </footer>
+</body>
+
+</html>
